@@ -1,15 +1,10 @@
 
 
-# Evaluation Activity for FIA_MBV_EXT.3 for 2D Image-based Modalities
-12th November 2018
+== 2D Face Toolbox 
 
-**_Note to the iTC members: Mobile toolbox is split into two parts. One part defines minimum functional testing that evaluators shall conduct as defined in the Evaluation Activity for FIA_MBV_EXT.3 without any changes. The other part provides guidance to evaluators what kind of additional tests should be done during the penetration testing in addition to the functional tests._**
+This document contains the descirption of the toolbox for all 2D image-based biometric modalities. Biometric modalities that do not use 2D image or video are covered in separate document. 
 
-This document describes the generic Evaluation Activity for FIA_MBV_EXT.3 framework for all 2D image-based biometric modalities. Biometric modalities that do not use 2D image or video are covered in separate Evaluation Activity documentation.
-
-The individual toolboxes will have specific details about the presentation attacks that must be tested within this framework.
-
-**a) Objective of the evaluation activity**
+== Objective of the evaluation activity**
 This evaluation activity defines the common minimum PAIs that all evaluator shall create and test protocol that evaluator shall follow to test the TOE. While this evaluation activity allows to develop an overall statement about the performance of the TOE with respect to its PAD mechanism, they cannot provide any assurance about the PAD functionality with respect to variations of PAIs.
 
 **b) Relationship of the evaluation activity to SFRs, SARs, and other evaluation activities**
