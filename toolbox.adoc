@@ -42,14 +42,14 @@ The production of the PAI for each toolbox shall be performed as follows:
 
 * The tester shall produce three (3) of each PAI as defined by the toolbox documents. 
 * The production of each PAI shall be documented in a manner that the production can be reproduced. 
-* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact)
+* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
 
 === Testing
 The actual test of each PAI shall be conducted as follows:
 
-* The artefact shall be applied to the TOE 10 times
-** If the TOE matches the previously enrolled user by the use of the artefact, the attempt is considered a fail 
-** If the TOE rejects the attempt, this is considered being a pass
+* The artefact shall be applied to the TOE 10 times.
+** If the TOE matches the previously enrolled user by the use of the artefact, the attempt is considered a fail. 
+** If the TOE rejects the attempt, this is considered being a pass.
 
 === Pass/Fail Criteria
 The following pass criteria shall be applied if no other criteria are defined in the individual modality toolbox documents. 
