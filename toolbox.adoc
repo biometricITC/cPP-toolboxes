@@ -58,12 +58,18 @@ A TOE passes the test if and only if it reliably defeats the use of *all artefac
 
 To reproducibly overcome the TOE by the use of a *certain artefact* in the outlined test scenario is defined as follows:
 
-* If a certain PAI does not match in any of its 10 attempts, the TOE passes this PAI. 
-* If a certain PAI matches 1 time out of 10, the TOE passes this PAI. 
-* If a certain PAI matches 2 times out of 10, an additional 10 attempts shall be added to the test
-* If a certain PAI matches 3 times or more (either of the 10 attempts or of the extended set of 20 attempts), the TOE fails that PAI
+.Pass/Fail Criteria
+[width="100%",options="header"]
+|====================
+|Attempts  |PAI Matches  |Outcome  
+|10  |0  |TOE passes this PAI  
+|10  |1  |TOE passes this PAI  
+|10  |2  |Additional ten (10) attempts are allowed with this PAI  
+|20  |2  |TOE passes this PAI
+|Up to 20  |3  |TOE fails this PAI
+|====================
 
-
+The maximum number of attempts allowed with a PAI is twenty (20). If three (3) matches are made to the PAI, the test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
 
 = Literature
 
