@@ -1,8 +1,11 @@
-= Number
+== Number
 Eye 1-3
 
 == Attack type
 Eye, digital photo attack
+
+==== Total Number of Species
+This attack has *1* species to be tested.
 
 == Overview
 _This attack scenario changes the spoofing medium from the paper to the screen._
@@ -26,7 +29,7 @@ Photo of target user that meet the following conditions::
 . Attacker displays it on the screen.
 
 == Variations
-tbd
+None
 
 == Prerequisite
 Target user turns on the eye unlock and registers user’s eye following instructions provided by the device and manual under the controlled environment.
@@ -47,8 +50,3 @@ tbd
 
 == Pass Criteria
 All unlock attempts shall be rejected. Proposed algorithms in the existing research papers are capable to detect this primitive attack.
-
-== Other
-Number of users: 1
-
-Number of Presentations: 10 attempts for each PAI

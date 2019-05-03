@@ -4,6 +4,9 @@ Eye 6-1
 == Attack type
 Eye, replay video attack
 
+==== Total Number of Species
+This attack has *2* species to be tested.
+
 == Overview
 _In this attack, high quality of target user’s video is available to attacker._
 
@@ -53,8 +56,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of users: 5
-
-Number of presentations: 10 attempts for each PAI
