@@ -1,8 +1,11 @@
-= Number
+== Number
 Eye 1-2
 
 == Attack type
 Eye, printed photo attack with contact lens
+
+==== Total Number of Species
+This attack has *1* species to be tested.
 
 == Overview
 _In this attack, user’s face digital image is not available but photo of the target can be used to create PAI._
@@ -31,7 +34,7 @@ Photo of target user that meet the following conditions::
 . Contact lens is placed on top of iris on photo (place a lens over each visible iris).
 
 == Variations
-tbd
+None
 
 == Prerequisite
 Target user turns on the eye unlock and registers user’s eye following instructions provided by the device and manual under the controlled environment.
@@ -52,8 +55,3 @@ tbd
 
 == Pass Criteria
 All unlock attempts shall be rejected. Proposed algorithms in the existing research papers are capable to detect this primitive attack.
-
-== Other
-Number of users: 1
-
-Number of Presentations: 10 attempts for each PAI

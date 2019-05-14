@@ -4,6 +4,9 @@ Eye 2-2
 == Attack type
 Eye, printed photo attack with contact lens
 
+==== Total Number of Species
+This attack has *1* species to be tested.
+
 == Overview
 _This attack scenario changes how to present the PAI and add a contact lens to adjust how the image is presented to the sensor._
 
@@ -27,7 +30,7 @@ Digital image of target user that meet the following conditions::
 . Contact lens is placed on top of iris on photo (place a lens over each visible iris).
 
 == Variations
-tbd
+None
 
 == Prerequisite
 Target user turns on the eye unlock and registers user’s eye following instructions provided by the device and manual under the controlled environment.
@@ -48,8 +51,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of Users: 5
-
-Number of Presentations: 10 attempts for each PAI

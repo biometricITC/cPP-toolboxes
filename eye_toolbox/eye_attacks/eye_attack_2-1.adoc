@@ -1,8 +1,11 @@
-= Number
+== Number
 Eye 2-1
 
 == Attack type
 Eye, printed photo attack
+
+==== Total Number of Species
+This attack has *2* species to be tested.
 
 == Overview
 _In this attack, normal quality of target user’s digital face image is available to attacker._
@@ -53,9 +56,4 @@ For example, see [Zhang et al., 2012], [Patel et al., 2015] and [Boulkenafet et 
 tbd
 
 == Pass Criteria
-tbd
-
-== Other
-Number of Users: 5
-
-Number of Presentations: 10 attempts for each PAI
+All unlock attempts shall be rejected. Proposed algorithms in the existing research papers are capable to detect this primitive attack.

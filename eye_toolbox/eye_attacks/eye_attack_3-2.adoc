@@ -4,6 +4,9 @@ Eye 3-2
 == Attack type
 Eye, printed photo attack with contact lens
 
+==== Total Number of Species
+This attack has *2* species to be tested.
+
 == Overview
 _This attack scenario changes how to present the PAI and add a contact lens to adjust how the image is presented to the sensor._
 
@@ -61,8 +64,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of Users: 5
-
-Number of Presentations: 10 attempts for each PAI

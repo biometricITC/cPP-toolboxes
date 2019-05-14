@@ -4,6 +4,9 @@ Eye 2-4
 == Attack type
 Eye, digital photo attack
 
+==== Total Number of Species
+This attack has *1* species to be tested.
+
 == Overview
 _Attacker uses image editing software (e.g. Photoshop) to enhance the image quality to create PAI and repeat the attack scenario No. 2-1, 2-2 and 2-3._
 
@@ -25,7 +28,7 @@ Digital image of target user that meet the following conditions::
 . Attacker displays it on the paper or screen.
 
 == Variations
-tbd
+None
 
 == Prerequisite
 Target user turns on the eye unlock and registers user’s eye following instructions provided by the device and manual (i.e. target user should not wear glasses, hat, beard, or heavy make-up during the enrollment if the guidance instructs not to do so) under the controlled environment.
@@ -49,8 +52,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of Users: 5
-
-Number of Presentations: 10 attempts for each PAI

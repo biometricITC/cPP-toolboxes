@@ -4,6 +4,9 @@ Eye 3-3
 == Attack type
 Eye, digital photo attack
 
+==== Total Number of Species
+This attack has *2* species to be tested.
+
 == Overview
 _This attack scenario changes the spoofing medium from the paper to the screen._
 
@@ -56,8 +59,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of Users: 5
-
-Number of Presentations: 10 attempts for each PAI

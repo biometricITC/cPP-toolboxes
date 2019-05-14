@@ -4,6 +4,9 @@ Eye 4-2
 == Attack type
 Eye, printed photo attack
 
+==== Total Number of Species
+This attack has *2* species to be tested.
+
 == Overview
 _Same as No.2-2 except high quality of user’s image is used instead of the normal quality_
 
@@ -59,8 +62,3 @@ tbd
 
 == Pass Criteria
 tbd
-
-== Other
-Number of Users: 5
-
-Number of presentations: 10 attempts for each PAI

@@ -1,9 +1,12 @@
-= Number
+== Number
 
 Eye 1-1
 
 == Attack type
 Eye, printed photo attack
+
+==== Total Number of Species
+This attack has *2* species to be tested.
 
 == Overview
 _In this attack, user’s face digital image is not available but photo of the target can be used to create PAI._
@@ -64,7 +67,3 @@ tbd
 == Pass Criteria
 All unlock attempts shall be rejected. Proposed algorithms in the existing research papers are capable to detect this primitive attack.
 
-== Other
-Number of users: 1
-
-Number of Presentations: 10 attempts for each PAI
