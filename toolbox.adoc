@@ -23,7 +23,7 @@ This document presents, at a high level, the expected methodology of the PAD fun
 
 === Independent vs Vulnerability Testing
 
-It should be noted that the toolbox as contained in this document focuses on a functional approach of testing as required by the assurance component ATE_IND.1. For this reason, it only addresses the tests as performed by the evaluation laboratory. 
+It should be noted that the toolbox as contained in this document focuses on a functional approach of testing as required by the assurance component ATE_FUN.1. For this reason, it only addresses the tests as performed by the evaluation laboratory. 
 Each toolbox contains the state of the art of the Presentation Attack Instruments of its respective modality. A TOE compliant to the <<PP>> is expected to reliably recognize these PAI. The functional approach of the toolboxes is however not suitable for any test in the context of AVA_VAN. 
 
 == Overall Test Approach
