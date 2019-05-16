@@ -35,8 +35,6 @@ Before the actual test can start, the following pre-requisites need to be met:
 * It has to be ensured that the test subject whose biometric data is used to produce the artefacts for testing is enrolled into the TOE. 
 ** Successful enrollment needs to be documented and verified by performing at least 5 genuine transactions with the TOE. No errors shall occur during the 5 genuine transactions. 
 
-TODO: Do we want sucessfull transactions or just matches? 
-
 ** If any errors occur, the enrollment process shall be repeated. In case of repeated errors, it should be considered to use a different biometric characteristic (this could mean to use a different finger of a subject or even use a different subject).
 
 ** In case the test subject cannot succeed to get sucesfully authenticated by the TOE within 5 tries (and switching to another biometric characteristic did not help or was not possible), the test subject shall be exempt from further testing. 
