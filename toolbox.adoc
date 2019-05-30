@@ -29,6 +29,14 @@ Each toolbox contains the state of the art of the Presentation Attack Instrument
 == Overall Test Approach
 As it can not be assumed that every TOE will return a dedicated result for the PAD functionality, success for an presentation attack is defined for the whole biometric functionality, including the matcher. This means that - in order to successfully overcome the TOE by the use of a PAI - a genuine person (the tester) has to be enrolled into the TOE, an artefact has to be created for the corresponding biometric modality of the tester and the artefact has to produce a match (i.e. a successful verification). The TOE shall be operated according to its guidance documentation and specifically all possbible threshold settings for the TOE (for the matcher as well as for the PAD) shall be set according to its guidance documentation. 
 
+=== Subjects
+For the purposes of the PAD testing each test will use one test subject for the creation of PAI.
+
+[NOTE]
+====
+As part of AVA_VAN.1 testing it is possible that additional test subjects may be used as determined by the laboratory analysis of the TOE. The number of subjects used under AVA_VAN.1 testing is not covered by this toolbox.
+====
+
 === Preparation
 Before the actual test can start, the following pre-requisites need to be met:
 
