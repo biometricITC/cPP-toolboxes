@@ -84,7 +84,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 The maximum number of attempts allowed with a PAI is twenty (20). If three (3) matches are made to the PAI, the test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
 
-= Literature
+== Literature
 
-- [[[PP]]] collaborative Protection Profile Module for Mobile biometric enrolment and verification - for unlocking the device 
+- [#PP]#[PP]# collaborative Protection Profile Module for Mobile biometric enrolment and verification - for unlocking the device 
 
