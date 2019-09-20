@@ -12,7 +12,6 @@ A printed HR or DSR photo of the user’s partial face is applied to the attacke
 
 == Input
 Photo of target user that meet the following conditions:
-
 * photo was taken under controlled environment where the background of the scene is uniform, the light in the office is switched on and the window blinds are down
 * photo was taken right after the target user’s enrollment and under the same environment to reduce the possibility that the PAI is rejected because of the difference of the background scene or expression
 * target user’s eyes are open and entire face is visible (i.e. well lit room)
