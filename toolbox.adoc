@@ -32,7 +32,7 @@ It is important to note that while the tests specified as part of the toolbox ar
 As it can not be assumed that every TOE will return a dedicated result for the PAD functionality, success for an presentation attack is defined for the whole biometric functionality, including the matcher. This means that - in order to successfully overcome the TOE by the use of a PAI - a genuine person (the tester) has to be enrolled into the TOE, an artefact has to be created for the corresponding biometric modality of the tester and the artefact has to produce a match (i.e. a successful verification). The TOE shall be operated according to its guidance documentation and specifically all possible threshold settings for the TOE (for the matcher as well as for the PAD) shall be set according to its guidance documentation. 
 
 === Subjects
-For the purposes of the PAD testing each test will use one test subject for the creation of PAI.
+For the purposes of the PAD testing each test will use three test subjects for the creation of PAI. A test subject is defined as one individual, and not separate samples from one person (i.e. three fingers from one person could not be considered to be three subjects for the creation of PAI).
 
 === Preparation
 Before the actual test can start, the following pre-requisites need to be met:
