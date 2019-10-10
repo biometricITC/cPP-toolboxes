@@ -1,5 +1,5 @@
 == Number
-Eye 3-4
+Eye 03_04
 
 == Attack type
 Eye, printed photo attack
@@ -8,7 +8,7 @@ Eye, printed photo attack
 This attack has *1* species to be tested.
 
 == Overview
-_This scenario is same as No. 3-1 except normal quality of user’s image is used with professional photo printing are used instead of the low quality ones._
+_This scenario is same as No. 01_01 except normal quality of user’s image is used with professional photo printing are used instead of the low quality ones._
 
 == Input
 Digital image of target user that meet the following conditions::
@@ -19,7 +19,7 @@ Digital image of target user that meet the following conditions::
 * photo includes user’s full face
 
 == Tools
-* T.1a, type 2
+* T.1a, type 3
 * T.3, type 3
 
 == Recipe

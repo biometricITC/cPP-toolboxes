@@ -1,25 +1,25 @@
 == Number
-Eye 4-2
+Eye 02_02
 
 == Attack type
-Eye, printed photo attack
+Eye, printed photo attack with contact lens
 
-==== Total Number of Species
+=== Total Number of Species
 This attack has *2* species to be tested.
 
 == Overview
-_Same as No.2-2 except high quality of user’s image is used instead of the normal quality_
+_This attack scenario changes how to present the PAI and add a contact lens to adjust how the image is presented to the sensor._
 
 == Input
 Digital image of target user that meet the following conditions::
-* captured by the DSR camera whose resolution is 40MP and above.
+* captured by the mobile device camera whose resolution is at least double the resolution of the device to be tested (or to use a second device of the same model). Evaluator shall not use the specific mobile device that embeds the TOE (because the TOE may be trained using images captured by the mobile device)
 * photo was taken under controlled environment where the background of the scene is uniform, the light in the office is switched on and the window blinds are down
 * photo was taken right after the target user’s enrolment and under the same condition to reduce the possibility that the PAI is rejected because of the difference of the background scene or expression
 * target user’s eyes are open and iris is mostly visible (i.e. well lit room)
 * photo includes user’s full face
 
-== Tools
-* T.1a, type 3
+=  Tools
+* T.1a, type 2
 * T.3, type 1
 * T.4, type 2
 * M.1, type 2
@@ -29,15 +29,17 @@ Digital image of target user that meet the following conditions::
 . Attacker prints target user’s face image on photo paper using the printer.
 . Contact lens is placed on top of iris on photo (place a lens over each visible iris).
 
+
 == Variations
 === Variation 1
-_This variant uses different printer and paper for the same test._
+_This variant uses the camera in a night mode to attempt to acquire an IR/NIR image of the iris. Only the laser printer is used as the image is not in the full visible spectrum (if any), so a high-quality laser print is sufficient._
 
 Input changes::
 * Unless the camera can operate in a night mode while in a fully-lit room, the conditions of the room must be adjusted to provide a better likelihood of using the IR/NIR range of the camera (i.e. low light).
 
 Tools and Materials changes::
-* T.1b, type 3
+* T.1b, type 2
+* T.3, type 2
 * M.1, type 1
 
 Recipe changes::
@@ -52,10 +54,10 @@ If the ST covers the multiple configurations for eye unlock, the same test shoul
 Attacker presents the photo with contact lens attached to the device by hand at controlled environment. Attacker adjusts the distance between the photo and the device seeing relevant attack video clip or attacker adjusts to right distance so that the device camera can’t see the edge of photo. Attacker also presents the photo to minimize the reflection from ambient lighting.
 
 == PAD technique
-Depth sensor can be used to detect 2D object. ???
+Different types of image aliasing appear during the recapture of the image that can be detected by the PAD. [Patel et al., 2015] study the PAD method that can be implemented on the mobile device.
 
 == Reference
-For example, see [Bhattacharjee & Marcel, 2017]
+For example, see [Zhang et al., 2012], [Patel et al., 2015] and [Boulkenafet et al., 2017]
 
 == Attack Potential
 tbd

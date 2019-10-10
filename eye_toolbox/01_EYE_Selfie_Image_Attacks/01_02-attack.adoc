@@ -1,10 +1,10 @@
 == Number
-Eye 2-2
+Eye 01_02
 
 == Attack type
 Eye, printed photo attack with contact lens
 
-==== Total Number of Species
+=== Total Number of Species
 This attack has *1* species to be tested.
 
 == Overview

@@ -1,14 +1,14 @@
 == Number
-Eye 4-1
+Eye 03_02
 
 == Attack type
 Eye, printed photo attack
 
-==== Total Number of Species
-This attack has *3* species to be tested.
+=== Total Number of Species
+This attack has *2* species to be tested.
 
 == Overview
-_This scenario is same as No. 2-1 except high quality of user’s image and spoofing medium are used instead of the normal quality ones._
+_Same as No.01_02 except high quality of user’s image is used instead of the normal quality_
 
 == Input
 Digital image of target user that meet the following conditions::
@@ -23,30 +23,21 @@ Digital image of target user that meet the following conditions::
 * T.3, type 1
 * T.4, type 2
 * M.1, type 2
+* M.2, type 1
 
 == Recipe
-. Attacker prints it out on photo paper. Printer resolution should be, for example, 600 dpi that achieves best quality of image (set to photo print).
+. Attacker prints target user’s face image on photo paper using the printer.
+. Contact lens is placed on top of iris on photo (place a lens over each visible iris).
 
 == Variations
 === Variation 1
 _This variant uses different printer and paper for the same test._
-
-Tools and Materials changes::
-* T.3, type 2
-* M.1, type 1
-
-Recipe changes::
-* The attacker prints at 600 dpi (or higher) to achieve the best quality print.
-
-=== Variation 2
-_This variant uses the camera in a night mode to attempt to acquire an IR/NIR image of the iris. Only the laser printer is used as the image is not in the full visible spectrum (if any), so a high-quality laser print is sufficient._
 
 Input changes::
 * Unless the camera can operate in a night mode while in a fully-lit room, the conditions of the room must be adjusted to provide a better likelihood of using the IR/NIR range of the camera (i.e. low light).
 
 Tools and Materials changes::
 * T.1b, type 3
-* T.3, type 2
 * M.1, type 1
 
 Recipe changes::
@@ -58,7 +49,7 @@ Target user turns on the eye unlock and registers user’s eye following instruc
 If the ST covers the multiple configurations for eye unlock, the same test should be done for all configurations.
 
 == Presentation
-Attacker presents the photo to the device by hand at controlled environment. Attacker adjusts the distance between the photo and the device seeing relevant attack video clip or attacker adjusts to right distance so that the device camera can’t see the edge of photo. Attacker also presents the photo to minimize the reflection from ambient lighting.
+Attacker presents the photo with contact lens attached to the device by hand at controlled environment. Attacker adjusts the distance between the photo and the device seeing relevant attack video clip or attacker adjusts to right distance so that the device camera can’t see the edge of photo. Attacker also presents the photo to minimize the reflection from ambient lighting.
 
 == PAD technique
 Depth sensor can be used to detect 2D object. ???

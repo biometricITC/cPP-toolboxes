@@ -1,14 +1,14 @@
 == Number
-Eye 3-1
+Eye 02_04
 
 == Attack type
 Eye, printed photo attack
 
-==== Total Number of Species
-This attack has *3* species to be tested.
+=== Total Number of Species
+This attack has *1* species to be tested.
 
 == Overview
-_This scenario is same as No. 2-1 except normal quality of user’s image and spoofing medium are used instead of the low quality ones._
+_This scenario is same as No. 3-1 except normal quality of user’s image is used with professional photo printing are used instead of the low quality ones._
 
 == Input
 Digital image of target user that meet the following conditions::
@@ -20,37 +20,13 @@ Digital image of target user that meet the following conditions::
 
 == Tools
 * T.1a, type 2
-* T.3, type 1
-* T.4, type 2
-* M.1, type 2
+* T.3, type 3
 
 == Recipe
-. Attacker prints it out on photo paper. Printer resolution should be, for example, 600 dpi that achieves best quality of image (set to photo print).
+. Attacker has photo printed at professional printing service.
 
 == Variations
-=== Variation 1
-_This variant uses different printer and paper for the same test._
-
-Tools and Materials changes::
-* T.3, type 2
-* M.1, type 1
-
-Recipe changes::
-* The attacker prints at 600 dpi (or higher) to achieve the best quality print.
-
-=== Variation 2
-_This variant uses the camera in a night mode to attempt to acquire an IR/NIR image of the iris. Only the laser printer is used as the image is not in the full visible spectrum (if any), so a high-quality laser print is sufficient._
-
-Input changes::
-* Unless the camera can operate in a night mode while in a fully-lit room, the conditions of the room must be adjusted to provide a better likelihood of using the IR/NIR range of the camera (i.e. low light).
-
-Tools and Materials changes::
-* T.1b, type 2
-* T.3, type 2
-* M.1, type 1
-
-Recipe changes::
-* The attacker prints at 600 dpi (or higher) to achieve the best quality print.
+None
 
 == Prerequisite
 Target user turns on the eye unlock and registers user’s eye following instructions provided by the device and manual under the controlled environment.
