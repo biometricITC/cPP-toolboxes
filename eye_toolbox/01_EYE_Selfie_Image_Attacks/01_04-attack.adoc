@@ -48,7 +48,36 @@ However, image editing software can be purchased at low cost.
 None
 
 == Attack Potential
-tbd
+.Attack Potential
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Standard
+|0
+
+|===
+
+
+*Total Score:* 3 or 4
+
+*Attack Potential:* Basic

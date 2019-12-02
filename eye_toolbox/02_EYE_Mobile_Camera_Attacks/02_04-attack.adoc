@@ -8,7 +8,7 @@ Eye, printed photo attack
 This attack has *1* species to be tested.
 
 == Overview
-_This scenario is same as No. 3-1 except normal quality of user’s image is used with professional photo printing are used instead of the low quality ones._
+_This scenario is same as No. 02_01 except normal quality of user’s image is used with professional photo printing are used instead of the low quality ones._
 
 == Input
 Digital image of target user that meet the following conditions::
@@ -43,7 +43,35 @@ Different types of image aliasing appear during the recapture of the image that 
 For example, see [Zhang et al., 2012], [Patel et al., 2015] and [Boulkenafet et al., 2017]
 
 == Attack Potential
-tbd
+.Attack Potential
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Specialized
+|4
+
+|===
+
+*Total Score:* 7 or 8
+
+*Attack Potential:* Basic

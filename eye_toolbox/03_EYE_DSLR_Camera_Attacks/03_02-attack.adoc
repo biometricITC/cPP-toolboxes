@@ -8,7 +8,7 @@ Eye, printed photo attack
 This attack has *2* species to be tested.
 
 == Overview
-_Same as No.01_02 except high quality of user’s image is used instead of the normal quality_
+_Same as No. 01_02 except high quality of user’s image is used instead of the normal quality_
 
 == Input
 Digital image of target user that meet the following conditions::
@@ -58,7 +58,68 @@ Depth sensor can be used to detect 2D object. ???
 For example, see [Bhattacharjee & Marcel, 2017]
 
 == Attack Potential
-tbd
+.Attack Potential Species 1
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Specialized
+|4
+
+|===
+
+*Total Score Species 1:* 7 or 8
+
+*Attack Potential:* Basic
+
+.Attack Potential Species 2
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
+
+|Elapsed Time
+|< 1 Week
+|1
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Moderate
+|4
+
+|Equipment
+|Specialized
+|4
+
+|===
+
+*Total Score Species 2:* 12
+
+*Attack Potential:* Basic

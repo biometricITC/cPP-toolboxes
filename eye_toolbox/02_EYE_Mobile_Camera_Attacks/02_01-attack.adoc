@@ -67,7 +67,101 @@ Different types of image aliasing appear during the recapture of the image that 
 For example, see [Zhang et al., 2012], [Patel et al., 2015] and [Boulkenafet et al., 2017]
 
 == Attack Potential
-tbd
+.Attack Potential Species 1
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Layman
+|0
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Standard
+|0
+
+|===
+
+*Total Score:* 0 or 1
+
+*Attack Potential:* Basic
+
+.Attack Potential Species 2
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
+
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Layman
+|0
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Standard
+|0
+
+|===
+
+*Total Score Species 2:* 0 or 1
+
+*Attack Potential:* Basic
+
+.Attack Potential Species 3
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
+
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Moderate
+|4
+
+|Equipment
+|Specialized
+|4
+
+|===
+
+*Total Score Species 3:* 11
+
+*Attack Potential:* Basic

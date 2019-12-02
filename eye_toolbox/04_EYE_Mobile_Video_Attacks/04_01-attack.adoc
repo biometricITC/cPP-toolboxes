@@ -52,7 +52,68 @@ Different types of image aliasing appear during the recapture of the video that 
 For example, see [Zhang et al., 2012], [Patel et al., 2015] and [Boulkenafet et al., 2017]
 
 == Attack Potential
-tbd
+.Attack Potential Species 1
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Week
+|1
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Standard
+|0
+
+|===
+
+*Total Score Species 1:* 4 or 5
+
+*Attack Potential:* Basic
+
+.Attack Potential Species 2
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
+
+|Elapsed Time
+|< 1 Week
+|1
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Moderate
+|4
+
+|Equipment
+|Standard
+|0
+
+|===
+
+*Total Score Species 2:* 8
+
+*Attack Potential:* Basic

@@ -8,7 +8,7 @@ Eye, digital photo attack
 This attack has *1* species to be tested.
 
 == Overview
-_Attacker uses image editing software (e.g. Photoshop) to enhance the image quality to create PAI and repeat the attack scenario No. 3-1, 3-2 and 3-3._
+_Attacker uses image editing software (e.g. Photoshop) to enhance the image quality to create PAI and repeat the attack scenario No. 02_01, 02_02 and 02_03._
 
 
 == Input
@@ -49,7 +49,35 @@ However, image editing software can be purchased at low cost.
 None
 
 == Attack Potential
-tbd
+.Attack Potential
+[cols="2,2,^.1",options="header"]
+|===
+|Factor 
+|Value
+|Score
 
-== Pass Criteria
-tbd
+|Elapsed Time
+|< 1 Day
+|0
+
+|Expertise
+|Proficient
+|3
+
+|Knowledge of TOE
+|Public
+|0
+
+|Window of Opportunity
+|Unnecessary/Unlimited or Easy
+|0 or 1
+
+|Equipment
+|Standard
+|0
+
+|===
+
+*Total Score:* 3 or 4
+
+*Attack Potential:* Basic
