@@ -1,4 +1,4 @@
-= Toolbox Overview for Testing Compliance for Mobile Biometric Enrolment and Verification 
+= Toolbox Overview 
 :showtitle:
 :toc:
 :sectnums:
@@ -8,9 +8,15 @@
 :revdate: 2019-12-06
 
 == Introduction
-This document an its child documents contain a toolbox of Presentation Attack Instruments (PAI) for various biometric modalities. This toolbox shall be used to test the PAD functionality of a TOE during an evaluation in compliance to <<PP>> in the context of the assurance classes. It should be noted that - while there may be some overlap to the area of penetration testing - this toolbox has not been developed for the use in the context of the assurance class AVA. 
+The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instrument(PAI)s that are natural biometric characteristics such as dead eye or artefacts holding copied or faked characteristics. Using national biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall create only artefacts to evaluate the TOE. 
 
-This toolbox document shall be used to test for the implementation of the SFR FIA_MBV_EXT.3 from <<PP>>. It contains content for the following biometric modalities:
+Toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read <<SD>> Section 6 first to use a toolbox because it explains how the evaluator shall use it during ATE_IND.1 and AVA_VAN.1 evaluation for PAD in detail.
+
+This overview is originally developped for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principle to evaluation activities for FIA_MBE_EXT.3.
+
+== Biometric modality supported
+
+Currently toolbox is developed for the following biometric modalities:
 
 * Eye
 * Face
@@ -19,49 +25,109 @@ This toolbox document shall be used to test for the implementation of the SFR FI
 * Fingerprint
 * Vein
 
-This document presents, at a high level, the expected methodology of the PAD functionality tests for all modalities, including preparation, test subjects and the pass/fail criteria.
+== Purpose of this toolbox overview
 
-=== Independent vs Vulnerability Testing
+This toolbox overview describes anything in common for all toolboxes, rather than repeating the same information in each toolbox. The evalator shall refer both the toolbox overview and relevant toolbox to perform ATE_IND.1 and AVA_VAN.1 evaluation. If there is conflict between the toolbox overview and each toolbox, the toolbox takes precedence over the toolbox overvew.
 
-It should be noted that the toolbox as contained in this document focuses on a functional approach of testing as required by the assurance component ATE_IND.1. For this reason, it only addresses the tests as performed by the evaluation laboratory. 
-Each toolbox contains the state of the art of the Presentation Attack Instruments of its respective modality. A TOE compliant to the <<PP>> is expected to reliably recognize these PAI. The functional approach of the toolboxes is however not suitable for any test in the context of AVA_VAN. 
+== Structure of toolbox
 
-It is important to note that while the tests specified as part of the toolbox are not intended to address AVA_VAN test requirements, that it does not preclude the evaluator from using the toolbox tests as a basis for building AVA_VAN tests. Modifications to the toolbox could cover any number of changes, from additional subjects to adjustments to how PAIs are created. These types of modifications are not described here.
+Each toolbox share the same structure and includes following sections.
 
-== Overall Test Approach
-As it can not be assumed that every TOE will return a dedicated result for the PAD functionality, success for an presentation attack is defined for the whole biometric functionality, including the matcher. This means that - in order to successfully overcome the TOE by the use of a PAI - a genuine person (the tester) has to be enrolled into the TOE, an artefact has to be created for the corresponding biometric modality of the tester and the artefact has to produce a match (i.e. a successful verification). The TOE shall be operated according to its guidance documentation and specifically all possible threshold settings for the TOE (for the matcher as well as for the PAD) shall be set according to its guidance documentation. 
+* _modality name_ Toolbox overview
+This section provides specific information only applicable to relevant biometric modality.
 
-=== Subjects
-For the purposes of the PAD testing each attack will use three test subjects for the creation of individual PAI. A test subject is defined as one individual, and not separate samples from one individual (i.e. three fingers from one person could not be considered to be three subjects for the creation of PAI).
+* _modality name_ Toolbox Inventory
+This section categorizes tools and materials that the evaluator shall use to capture a image of biometric characteristics and produce artefacts.
 
-=== Preparation
+* Mobile Toolbox for _modality name_ Verification List
+This section summarizes all test items that the evaluator shall peform during the ATE_IND.1 evaluation. As explained in <<SD>> Section 6, the evaluator shall select specific test items for AVA_VAN.1 evaluation based on the result of ATE_IND.1 evaluation. 
+
+* References
+This section lists all publicly available information referred to create a toolbox.
+
+* Test items
+Each test item includes the following sub-sections. This toolbox overview provide a general test protocol in common for all toolboxes and these test items describe more detailed information to enable repeatable testing.
+
+|===
+
+|Sub-section name | Description
+
+|Number
+|Identification number of test
+
+|Attack type
+|Category of attack
+
+|Overview
+|General overview of test
+
+|Input
+|Required input to produce artefacts
+
+|Tools
+|Required tools to capture a image of biometric characteristics and produce artefacts
+
+|Recipe
+|Procedure to create artefacts
+
+|Variations
+|Variations of tests that the evaluator should consider AVA_VAN.1 evaluation
+
+|Prerequisite
+|Any conditions that should meet to perform each test
+
+|Presentation
+|Detail instraction to present artefact to the TOE
+
+|Attack Potential
+|Attack potential rating that the evaluator shall use for AVA_VAN.1 evaluation
+
+|Pass Criteria
+|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for ATE_IND.1 and one defined in <<SD>> Section 9.3 for AVA_VAN.1  
+
+|===
+
+== Common guidance for ATE_IND.1 evalaution
+As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means that - in order to successfully overcome the TOE by the use of artefacts - a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a match (i.e. a successful biometric verification).
+
+The following guidance is common in all toolboxes. More specific guidance to specific biometric modality is provided in each toolbox. 
+
+=== General test protocol
+Presentation attack can be performed through the following three steps. 
+
+==== Preparation
 Before the actual test can start, the following pre-requisites need to be met:
 
-* It has to be ensured that the test subject whose biometric data is used to produce the artefacts for testing is enrolled into the TOE. 
-** Successful enrollment needs to be documented and verified by performing at least 5 genuine transactions with the TOE. No errors shall occur during the 5 genuine transactions. 
+* It has to be ensured that the test subject whose body part is used to produce the artefacts for testing is enrolled into the TOE correctly as follows.
 
-** If any errors occur, the enrollment process shall be repeated. In case of repeated errors, it should be considered to use a different biometric characteristic (this could mean to use a different finger of a subject or even use a different subject).
+** Enrolment shall be done following guidance provided by the TOE.
 
-** In case the test subject cannot succeed to get sucesfully authenticated by the TOE within 5 tries (and switching to another biometric characteristic did not help or was not possible), the test subject shall be exempt from further testing. 
+** At least 5 test enrolment transactions shall be performed by the test subject to make sure that the test suject can enrol correctly.
 
-Each toolbox will provide an inventory of tools needed to perform the tests. These tools must be available to complete the testing process. The tools are described and not picked. For example, a class of printer or camera is specified, but not a specific printer or camera model.
+** In case of repeated failures during these test enrolment, the test subject shall use a different body part (this could mean to use a different finger of the test subject in case of fingerprint verification) and start test enrolment transactions again.
 
-=== PAI Production 
-The production of the PAI for each toolbox shall be performed as follows:
+** If the test subject cannot enrol any body parts during test enrolment, the test subject shall be exempt from further testing. 
 
-* Each toolbox is accompanied by a table that identifies the number of artefacts that shall be produced per PAI (the default is 3)
-* The tester shall produce the required amount of artefacts
-* The production of each artefact shall be documented in a manner that the production can be reproduced. 
+=== Artefact production 
+The production of artefacts for each toolbox shall be performed as follows:
+
+* The evaluator shall produce all artefacts defined in the toolbox.
+* The evaluator shall follow instructions in the toolbox to produce artefacts, especially the evaluator shall use tools or materials (e.g. camera, display or printer) that meet requirements in toolbox.
+* The evaluator shall produce three artefacts from each test subject if the toolbox doesn't define any specific numbers. If the toolbox defines the numbers, the evaluator shall produce required amount of artefacts.
+* The evaluator shall document any necessary information so that the evaluato can re-produce artefacts used for the test.
 * Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
 
-=== Testing
-The actual test of each PAI shall be conducted generally as follows (specific details are provided with the attack instructions):
+=== Presentation of artefacts
+The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
 * The user is enrolled to the TOE
 * Artefacts are created according to the attack instructions
 * The artefact shall be applied to the TOE 10 times
 ** If the TOE matches the artefact to the enrolled user, the attempt is considered a failed attempt. 
 ** If the TOE rejects the artefact, this is considered being a passed attempt.
+
+=== Number of Subjects
+For the purposes of the PAD testing, the evaluator shall prepare three test subjects for the creation of artefacts. A test subject is defined as one individual, and not different body parts from one person (i.e. three fingers from one person could not be considered to be three test subjects for the creation of artefacts).
 
 === Pass/Fail Criteria
 The following pass criteria shall be applied if no other criteria are defined in the individual modality toolbox documents. 
@@ -104,5 +170,6 @@ The maximum number of attempts allowed with a PAI is twenty (20). If three (3) m
 
 == Literature
 
-- [#PP]#[PP]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 5, 2019, Version 0.91
+- [#SD]#[SD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 05, 2019, Version 0.5
 
