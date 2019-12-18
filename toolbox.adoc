@@ -93,7 +93,7 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |===
 
 == Common guidance for independent test
-As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means that - in order to successfully overcome the TOE by the use of artefacts - a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a match (i.e. a successful biometric verification).
+As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means that - in order to successfully overcome the TOE by the use of artefacts - a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
 
 The following guidance is common in all toolboxes. More specific guidance to specific biometric modality is provided in each toolbox. 
 
@@ -129,11 +129,11 @@ The production of artefacts for each toolbox shall be performed as follows:
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* Each artefact shall be applied to the TOE 10 times
+* Each artefact shall be presented to the TOE 10 times
 
-** If the TOE matches the artefact to the enrolled user, the attempt is considered a failed attempt. 
+** If the TOE matches the artefact to the enrolled user, the attempt is considered a attack presentation match attempt. 
 
-** If the TOE rejects the artefact, this is considered being a passed attempt.
+** If the TOE rejects the artefact, presentation attack fails.
 
 === Number of Subjects
 The evaluator shall prepare three test subjects for the above test. A test subject is defined as one individual, and not different body parts from one person (i.e. three fingers from one person could not be considered to be three test subjects for the creation of artefacts).
@@ -201,7 +201,7 @@ Before the actual test can start, the following pre-requisites need to be met:
 ==== Artefact production 
 The production of artefacts for each toolbox shall be performed as follows:
 
-* __The evaluator should select artefacts in a toolbox that may produce failed attempts at higher probability considering the result of independent test.__
+* __The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent test.__
 
 * __The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. Toolbox describes generalized process to produce artefacts refering reseach papers. These research papers may describe more detail information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same as ones tested by reseachers. The evaluator shall take such infomration into consideration to improve artefacts if the evaluator can find the relevant research papers.__
 
@@ -214,14 +214,14 @@ The production of artefacts for each toolbox shall be performed as follows:
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* __Each artefact shall be applied to the TOE arbitary number of times within allowed time period. As described in <<SD>>, both independent and penetration test shall be finished within one week.__
+* __Each artefact shall be presented to the TOE arbitary number of times within allowed time period. As described in <<SD>>, both independent and penetration test shall be finished within one week.__
 
-** If the TOE matches the artefact to the enrolled user, the attempt is considered a failed attempt. 
+** If the TOE matches the artefact to the enrolled user, the attempt is considered a attack presentation match attempt. 
 
-** If the TOE rejects the artefact, this is considered being a passed attempt.
+** If the TOE rejects the artefact, presentation attack fails.
 
 === Number of Subjects
-__If the evaluator can create artefacts that produce failed attempts during independent testing, the evalautor should select test subjects from which the artefacts created and increase the number of attemps. The evaluator may change the test subject for penetration test as described in <<SD>> Section 6.__
+__If the evaluator can create artefacts that produce attack presentation match during independent testing, the evalautor should select test subjects from which the artefacts created and increase the number of attemps. The evaluator may change the test subject for penetration test as described in <<SD>> Section 6.__
 
 === Pass/Fail Criteria
 __As described in <<SD>>, both independent and penetration test shall be finished within one week. The evaluator may select one or two artefacts and perform arbitary number of attempts within this time period. If the evaluator can create artefacts that meet the criteira defined in <<SD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.__
