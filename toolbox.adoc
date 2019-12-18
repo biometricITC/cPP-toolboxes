@@ -221,7 +221,7 @@ The evaluator shall present artefacts to the TOE to perform presentation attacks
 ** If the TOE rejects the artefact, presentation attack fails.
 
 === Number of Subjects
-__If the evaluator can create artefacts that produce attack presentation match during independent testing, the evalautor should select test subjects from which the artefacts created and increase the number of attemps. The evaluator may change the test subject for penetration test as described in <<SD>> Section 6.__
+__If the evaluator can create artefacts that produce attack presentation match during independent testing, the evalautor should select test subjects from which the artefacts created and increase the number of attemps. The evaluator may replace the test subject for penetration test as described in <<SD>> Section 6.__
 
 === Pass/Fail Criteria
 __As described in <<SD>>, both independent and penetration test shall be finished within one week. The evaluator may select one or two artefacts and perform arbitary number of attempts within this time period. If the evaluator can create artefacts that meet the criteira defined in <<SD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.__
