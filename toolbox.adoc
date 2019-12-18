@@ -8,11 +8,11 @@
 :revdate: 2019-12-06
 
 == Introduction
-The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instrument(PAI)s that are natural biometric characteristics such as dead eye or artefacts holding copied or faked characteristics. Using national biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall create only artefacts to evaluate the TOE. 
+The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
 
-Toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read <<SD>> Section 6 first to use a toolbox because it explains how the evaluator shall use it during ATE_IND.1 (Independent test) and AVA_VAN.1 (Penetration test) evaluation for PAD in detail.
+The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<SD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent test) and AVA_VAN.1 (Penetration test) evaluation for PAD in detail.
 
-This overview is originally developped for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principle to evaluation activities for FIA_MBE_EXT.3.
+This overview is originally developed for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principles to evaluation activities for FIA_MBE_EXT.3.
 
 == Biometric modalities supported
 
@@ -27,35 +27,32 @@ Currently toolbox is developed for the following biometric modalities:
 
 == Purpose of this toolbox overview
 
-This toolbox overview describes anything in common for all toolboxes, rather than repeating the same information in each toolbox. The evalator shall refer both the toolbox overview and relevant toolbox to perform independent and penetration test. If there is conflict between the toolbox overview and each toolbox, the toolbox takes precedence over the toolbox overvew.
+This toolbox overview describes common instructions and components for all toolboxes, rather than repeating the same information in each toolbox. The evaluator shall refer both the toolbox overview and the relevant toolbox to perform independent and penetration tests. If there is conflict between the toolbox overview and a toolbox, the toolbox takes precedence over the overview.
 
-== Structure of toolbox
+== Structure of the Toolbox
 
-Each toolbox share the same structure and includes following sections.
+Each toolbox shares the same structure and includes following sections.
 
-* _modality name_ Toolbox overview  
-+
+_modality name_ Toolbox overview::
 This section provides specific information only applicable to relevant biometric modality.
 
-* _modality name_ Toolbox Inventory
-+
+_modality name_ Toolbox Inventory::
 This section categorizes tools and materials that the evaluator shall use to capture a image of biometric characteristics and produce artefacts.
 
-* Mobile Toolbox for _modality name_ Verification List  
-+
+Mobile Toolbox for _modality name_ Verification List::
 This section summarizes all test items that the evaluator shall peform during independent test. As explained in <<SD>> Section 6, the evaluator shall select specific test items for penetration test based on the result of independent test. 
 
-* References
-+
+References::
 This section lists all publicly available information referred to create a toolbox.
 
-* Test items
-+
+Test items::
 Each test item includes the following sub-sections. This toolbox overview provide a general test protocol in common for all toolboxes and these test items describe more detailed information to enable repeatable testing.
 +
+[cols=".^1,2",options="header"]
 |===
 
-|Sub-section name | Description
+|Sub-section name 
+|Description
 
 |Number
 |Identification number of test
@@ -82,7 +79,7 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Any conditions that should meet to perform each test
 
 |Presentation
-|Detail instraction to present artefact to the TOE
+|Detail instruction to present artefact to the TOE
 
 |Attack Potential
 |Attack potential rating that the evaluator shall use for AVA_VAN.1 evaluation
@@ -92,26 +89,53 @@ Each test item includes the following sub-sections. This toolbox overview provid
 
 |===
 
-== Common guidance for independent test
-As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means that - in order to successfully overcome the TOE by the use of artefacts - a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
+== Common guidance for Independent & Vulnerability testing protocols
+As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
 
-The following guidance is common in all toolboxes. More specific guidance to specific biometric modality is provided in each toolbox. 
+For all types of testing, there are some common steps/procedures to be followed. These are detailed here.
 
-=== General test protocol
-Presentation attack can be performed through the following three steps. 
-
-==== Preparation
-Before the actual test can start, the following pre-requisites need to be met:
+=== Preparation
+Before testing can start, the following pre-requisite needs to be met:
 
 * It has to be ensured that the test subject whose body part is used to produce the artefacts for testing is enrolled into the TOE correctly as follows.
 
 ** Enrolment shall be done following guidance provided by the TOE.
 
-** At least 5 test enrolment transactions shall be performed by the test subject to make sure that the test suject can enrol correctly.
+** At least 5 test enrolment transactions shall be performed by the test subject to ensure that the test subject can enrol correctly and be verified after enrolment.
 
-** In case of repeated failures during these test enrolment, the test subject shall use a different body part (this could mean to use a different finger of the test subject in case of fingerprint verification) and start test enrolment transactions again.
+** In case of repeated failures during the test enrolment, the test subject shall use a different body part (this could mean to use a different finger of the test subject in case of fingerprint verification) and start test enrolment transactions again.
 
-** If the test subject cannot enrol any body parts during test enrolment, the test subject shall be exempt from further testing. 
+** If the test subject cannot enrol any body parts during the test enrolment, the test subject shall be exempt from further testing. 
+
+=== Artefact production
+Artefact production needs to follow these requirements:
+
+* The evaluator shall document any necessary information so that artefacts used for the test can be re-produced by the evaluator.
+
+* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
+
+=== Presentation of artefacts
+The results of the presentation of artefacts is defined as:
+
+[cols=".^1,2",options="header"]
+|===
+
+|Result 
+|Definition
+
+|Successful (Match) Attack
+|The TOE matches the artefact to the enrolled user
+
+|Failed Attack
+|The TOE rejects the artefact
+
+|===
+
+== Guidance for Independent Testing (ATE_IND.1)
+For independent testing, this guidance is common for all toolboxes. More specific guidance to specific biometric modality is provided in each toolbox. 
+
+=== General test protocol
+Presentation attack can be performed through the following three steps. 
 
 ==== Artefact production 
 The production of artefacts for each toolbox shall be performed as follows:
@@ -122,18 +146,10 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator shall produce three artefacts from each test subject.
 
-* The evaluator shall document any necessary information so that the evaluator can re-produce artefacts used for the test.
-
-* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
-
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
 * Each artefact shall be presented to the TOE 10 times
-
-** If the TOE matches the artefact to the enrolled user, the attempt is considered a attack presentation match attempt. 
-
-** If the TOE rejects the artefact, presentation attack fails.
 
 === Number of Subjects
 The evaluator shall prepare three test subjects for the above test. A test subject is defined as one individual, and not different body parts from one person (i.e. three fingers from one person could not be considered to be three test subjects for the creation of artefacts).
@@ -167,66 +183,45 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 |20
 |2
-|TOE passes this aretefact
+|TOE passes this artefact
 
 |Up to 20
 |3 or more
-|TOE fails this aretefact
+|TOE fails this artefact
 
 |===
 
 The maximum number of attempts allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, independent test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
 
-== Common guidance for penetration test
-The evaluator can move to penetration test only if the TOE passes independent test. As described in <<SD>> Section 6, the evaluator shall select those artefacts that show higher attack presentation match rate during independent test or higher quality artefacts.
+== Guidance for Penetration Testing (AVA_VAN.1)
+The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<SD>> Section 6, the evaluator shall select those artefacts that show higher attack presentation match rate during independent test or higher quality artefacts.
 
-The same guidance in Section 5 applies to penetration testing except those in __italic__.
+This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing Protocol>>.
 
 === General test protocol
 Presentation attack can be performed through the following three steps. 
 
-==== Preparation
-Before the actual test can start, the following pre-requisites need to be met:
-
-* It has to be ensured that the test subject whose body part is used to produce the artefacts for testing is enrolled into the TOE correctly as follows.
-
-** Enrolment shall be done following guidance provided by the TOE.
-
-** At least 5 test enrolment transactions shall be performed by the test subject to make sure that the test suject can enrol correctly.
-
-** In case of repeated failures during these test enrolment, the test subject shall use a different body part (this could mean to use a different finger of the test subject in case of fingerprint verification) and start test enrolment transactions again.
-
-** If the test subject cannot enrol any body parts during test enrolment, the test subject shall be exempt from further testing. 
-
 ==== Artefact production 
 The production of artefacts for each toolbox shall be performed as follows:
 
-* __The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent test.__
+* The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent test.
 
-* __The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. Toolbox describes generalized process to produce artefacts refering reseach papers. These research papers may describe more detail information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same as ones tested by reseachers. The evaluator shall take such infomration into consideration to improve artefacts if the evaluator can find the relevant research papers.__
+* The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall take such information into consideration to improve artefacts if the evaluator can find the relevant research papers.
 
-* __The evaluator may produce arbitary number of artefacts from each test subject within allowed time period. As described in <<SD>>, both independent and penetration test shall be finished within one week.__
-
-* The evaluator shall document any necessary information so that the evaluator can re-produce artefacts used for the test.
-
-* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
+* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<SD>>, both independent and penetration testing shall be finished within one week.
 
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* __Each artefact shall be presented to the TOE arbitary number of times within allowed time period. As described in <<SD>>, both independent and penetration test shall be finished within one week.__
-
-** If the TOE matches the artefact to the enrolled user, the attempt is considered a attack presentation match attempt. 
-
-** If the TOE rejects the artefact, presentation attack fails.
+* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<SD>>, both independent and penetration testing shall be finished within one week.
 
 === Number of Subjects
-__If the evaluator can create artefacts that produce attack presentation match during independent testing, the evalautor should select test subjects from which the artefacts created and increase the number of attemps. The evaluator may replace the test subject for penetration test as described in <<SD>> Section 6.__
+If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts has successful matches and increase the number of attempts. The evaluator may replace the test subject for penetration testing as described in <<SD>> Section 6.
 
 === Pass/Fail Criteria
-__As described in <<SD>>, both independent and penetration test shall be finished within one week. The evaluator may select one or two artefacts and perform arbitary number of attempts within this time period. If the evaluator can create artefacts that meet the criteira defined in <<SD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.__
+As described in <<SD>>, both independent and penetration test shall be finished within one week. The evaluator may select one or two artefacts and perform arbitrary number of attempts within this time period. If the evaluator can create artefacts that meet the criteria defined in <<SD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.
 
-== Literature
+== Related Documents
 
 - [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 5, 2019, Version 0.91
 - [#SD]#[SD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 05, 2019, Version 0.5
