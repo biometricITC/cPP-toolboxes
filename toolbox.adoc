@@ -211,7 +211,7 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent testing.
 
-* The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall take such information into consideration to improve artefacts if the evaluator can find the relevant research papers.
+* The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
 
 * The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<SD>>, both independent and penetration testing shall be finished within one week.
 
