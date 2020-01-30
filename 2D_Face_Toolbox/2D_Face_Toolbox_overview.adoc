@@ -29,9 +29,29 @@ An attacker attempts to spoof the TOE using a recorded face video replayed on a 
 == Face presentation attack detection
 Images captured by the TOE from the artefact may visually look very similar to the images captured from a real human, however, they are not exactly the same. For example, printed or displayed images on the paper or screen reflect light in different ways because a human is a complex non-rigid 3D object, whereas the photo or screen can be seen as a planar rigid object. The surface properties of real faces and fake ones, e.g. pigments, are also different. In addition, artefacts may contain moir ́e patterns that are an undesired aliasing of images produced during various image display and image acquisition processes. The TOE can detect such differences between images taken from real human and artefacts to prevent the presentation attacks. 
 
-== Influential factor of aretefact production  
-Face artefacts can be created in a variety of ways (e.g. using different camera such as smartphone camera or dSLR camera) and such difference may affect performance of the TOE’s PAD algorithm. The following table summrize such
-These differences are mainly influenced by the following factors listed in the table below and the performance of the PAD algorithm may also be affected by them.
+== Influential factors of artifact production and presentation 
+Face artefacts can be created in a variety of ways (e.g. using different camera such as smartphone camera or dSLR camera) and the following table summarize factors that may affect performance of the PAD algorithm.
+
+
+.Influential factors
+|===
+|# |Factor |Description
+
+|1
+|Specification of tools
+|For example, the quality of digital photo depends on resolution of a screen. If the screen is 4K that refers to a horizontal screen resolution in the order of 4,000 pixels, it can provide the finest clarity and detail of the face image
+
+|2
+|Environmental condition 
+|Brightness of face image captured depends on illumination condition.  Background scene may also influence the performance of the PAD algorithm 
+
+|3
+|Presentation method
+|Face artefact can be presented by hand or by tripod
+
+|===
+
+
 
 | No	| Factor	| Description |
 |-------|---------------|-------------|
