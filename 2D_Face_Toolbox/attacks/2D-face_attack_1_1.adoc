@@ -16,7 +16,7 @@ Type 1 tools in <<2DFaceInventory>>
 == Recipe
 The evaluator shall capture a face image and print it on a paper. 
 
-The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS) and take the best quality of face images.
+The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS) and printer (e.g. resolution) to create clearer face artefacts.
 
 The evaulator shall take at least three photos and select the bese one to create each face artefact.
 
@@ -25,7 +25,7 @@ The evaluator shall consider to change the following factors for penetration tes
 
 * Configuration of tool
 +
-The evaluator can change, for example, FPS (Frames Per Second) or ISO number to change quality of face images. Such change may affect the texture of artefacts that may lead to false acceptance. 
+The evaluator can change, for example, FPS (Frames Per Second) or ISO number of camera to change quality of face images. Such change may affect the texture of artefacts that may lead to false acceptance. 
 
 * Presentation method
 + 
