@@ -1,4 +1,4 @@
-= 2D face image toolbox
+= 2D face image toolbox overview
 
 == Overview
 There are two categories of face artefact that can be used for presentation attack. First one is two-dimensional face artefact such as printed photo of a target user and the another is, for example, a face mask that mimics three-dimensional geometry of a user’s face. This toolbox describes 2D face artefacts that the evaluator shall create for the PAD testing.
@@ -32,7 +32,7 @@ An attacker attempts to spoof the TOE using a recorded face video replayed on a 
 Images captured by the TOE from the 2D face artefacts may visually look very similar to the images captured from a real human, however, they are not exactly the same. For example, printed or displayed images on the paper or screen reflect light in different ways because a human is a complex non-rigid 3D object, whereas the photo or screen can be seen as a planar rigid object. The surface properties of real faces and face artefacts, e.g. pigments, are also different. In addition, face artefacts may contain moir ́e patterns that are an undesired aliasing of images produced during various image display and image acquisition processes. The TOE can detect such differences between images taken from real human and artefacts to detect and prevent the presentation attacks.
 
 == Common test protocol
-Face PAD testing can be done in a variety of ways. The evaluator can use different type of cameras under different illumination to capture face images of test users to create face artefacts. The evaluator can also present these artefacts under different condition. It’s not possible to cover all such possible test scenarios and this toolbox defines the common test protocol to maintain consistency among different PAD testing but also enable to conduct the testing efficiently referring research papers. The evaluator shall follow the test protocols describe below, in addition to guidance provided in <<Toolbox Overview>> to conduct the PAD testing.
+Face PAD testing can be done in a variety of ways. The evaluator can use different type of cameras under different illumination to capture face images of test users to create face artefacts. The evaluator can also present these artefacts under different condition. It’s not possible to cover all such possible test scenarios and this toolbox defines the common test protocol to maintain consistency among different PAD testing but also enable to conduct the testing efficiently referring research papers. The evaluator shall follow the test protocols describe below, in addition to guidance provided in <<ToolOverview>> to conduct the PAD testing.
 
 . Enrollment
 +
@@ -44,13 +44,13 @@ Face PAD testing can be done in a variety of ways. The evaluator can use differe
 +
 .. The evaluator shall capture face images right after the enrolment of test users under the same condition to reduce the possibility that the artefacts are rejected because of the difference of illumination, background scene and expression.
 +
-.. The evaluator shall capture test users’ face images by a normal and high quality camera for printed and digital photo attack. The evaluator shall also record test users’ faces for ten seconds for reply video attack. Definition of normal and high quality is explained in Section X and specification of tools is defined in <<2D face image toolbox inventory>>.
+.. The evaluator shall capture test users’ face images by a normal and high quality camera for printed and digital photo attack. The evaluator shall also record test users’ faces for ten seconds for reply video attack. Definition of normal and high quality is explained in "Requirement for tools" below.
 
 . Artefact creation
 +
 .. The evaluator shall print face images for printed photo attack, display them on a screen for digital photo attack and replay them on a screen for replay video attack. Size of face images on artefacts shall be same as the test user’s face.
 +
-.. The evaluator shall use those tools that meet specification defined in <<2D face image toolbox inventory>> to create artefacts.
+.. The evaluator shall use those tools that meet requirements defined in <<2DFaceInventory>> to create artefacts.
 
 . Artefact presentation
 +
@@ -62,37 +62,24 @@ Face PAD testing can be done in a variety of ways. The evaluator can use differe
 +
 .. The evaluator shall present artefacts by hand for printed and digital photo attack to introduce some noticeable motion and by tripod for replay video attack.
 
-== Specification of tool
+== Requirement for tools
 The evaluator needs to use several tools, such as camera, screen or printer and specification of tools affect clarity or sharpness of face artefacts. For example, the quality of digital photo depends on resolution of a screen. If the screen is 4K that refers to a horizontal screen resolution in the order of 4,000 pixels, it can provide the finest clarity and detail of the face image.
-This toolbox defines two level of tools, normal and high quality, to cover variety of tools to conduct the PAD testing efficiently. Normal quality tools are inexpensive, and anyone can use them easily to capture and upload face images on the SNS. The attacker can also create face artefacts with such uploaded face images without any difficulty. Successful presentation attacks using uploaded face images are widely known and detail attack method is published on the Internet, so the evaluator shall try this type of artefacts first. On the other hand, high quality tools have better performance (e.g. higher resolution) than normal ones and should be the latest tools (i.e. released at least within one or two years from the date of PAD testing). Those tools may be expensive but should be able to rent at affordable cost. The reason why such tools should be used is that the PAD algorithm normally shows good performance for artefacts used to train the algorithm however less performance for ones the algorithm has never seen before. The evaluator shall create such artefacts that can most likely bypass the PAD using the latest high-end tools. Specification of normal and high quality tool is defined in <<2D face image toolbox inventory>>.
+This toolbox defines two level of tools, normal and high quality, to cover variety of tools to conduct the PAD testing efficiently. Normal quality tools are inexpensive, and anyone can use them easily to capture and upload face images on the SNS. The attacker can also create face artefacts with such uploaded face images without any difficulty. Presentation attacks using uploaded face images is very easy and detail attack method is published on the Internet, so the evaluator shall try this type of artefacts first. On the other hand, high quality tools have better performance (e.g. higher resolution) than normal ones and should be the latest tools (i.e. released at least within one years from the date of PAD testing). Those tools may be expensive but should be able to rent at affordable cost. The reason why such tools should be used is that the PAD algorithm normally shows good performance for artefacts used to train the algorithm however less performance for ones the algorithm has never seen before and attakers may also try to create high-quality artifacts as much as they can to maximize the chance of successful attacks. The evaluator shall create such artefacts that can most likely bypass the PAD using the latest high-end tools. Requirement for normal and high quality tool is defined in <<2DFaceInventory>>.
 
-### Number of trials
+== Test items
+The evalautor shall create artefacts defined in all test items. <<ToolOverview>> defines required number of attempts for the independent testing and maximum timeframe for both independent and penetration testing.
 
-### Number of trials
-Evaluator shall conduct the testing with five users. Two source images shall be taken for quality level and two spoofing mediums (i.e. Level 1 of photo and screen, Level 2 of photo and screen and Level 3 of photo and screen) shall be used for each user. 20 presentations shall be made for each PAI changing the distance between the TOE and spoofing medium (i.e. 180 presentations shall be made for each user)
+== Pass/fail criteria
+If Pass/fail criteria is defined in the test items the evaluator shall follow them, otherwise follow criteria defined in <<BIOSD>> and <<ToolOverview>>.
 
-| Attack type  | Source image   | Spoofing medium   | # subject | # presentation |
-|--------------|----------------|-------------------|-----------|----------------|
-| 2D face, printed photo | Level 1   | Level 1    | 5 | 20 |
-|   | Level 2  | Level 2  | 5  |20   |
-|   | Level 3  | Level 3  | 5  | 20  |
-| 2D face, digital photo attack | Level 1   | Level 1    | 5 | 20 |
-|   | Level 2  | Level 2  | 5  | 20  |
-|   | Level 3  | Level 3  | 5  | 20  |
-| 2D face, replay video attack | Level 1   | Level 1    | 5 | 20 |
-|   | Level 2  | Level 2  | 5  | 20  |
-|   | Level 3  | Level 3  | 5  | 20  |
+== Useful information 
+2D Face Image Toolbox was created based on research papers listed in <<2DFaceREF>>. The evalautor should read them before conducting the PAD testing because they includes more detailed information about PAD test methods.
 
-### f) Pass/fail criteria
-Evaluator doesn’t need to present each PAI more than 20 times. Evaluator may learn, for example, the distance between the spoofing medium and the TOE that the TOE accepts the PAI at high probability during the presentations.
-
-PAD will never work with an accuracy of 100% because of the limitation of current technology of mobile devices. The following pass criteria is defined based on the performance of the state of art mobile PAD technology that was actually tested in the relevant research.
-
-*For Level 1 quality testing for all type of attack, the TOE shall reject more than 95% of
-unlock attempts with each PAI.
-For Level 2 quality testing for all type of attack, the TOE shall reject more than 90% of
-unlock attempts with each PAI.
-For Level 3 quality testing for all type of attack, the TOE shall reject more than 50% of
-unlock attempts with each PAI.*
-
-Above criteria marked in *italics* is initial proposal and need to be discussed later.
+=== Related Documents
+[bibliography]
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 20, 2019, Version 0.92 - [BIOSD].
+- [#ToolOverview]#[ToolOverview]# Toolbox Overview, TBD.
+- [#2DFaceOverview]#[2DFaceOverview]# This document
+- [#2DFaceInventory]#[2DFaceInventory]# 2D Face Image Toolbox Inventory, TBD.
+- [#2DFaceList]#[2DFaceList]# 2D Face Image Verification List, TBD.
+- [#2DFaceREF]#[2DFaceREF]# 2D Face Image References, TBD.
