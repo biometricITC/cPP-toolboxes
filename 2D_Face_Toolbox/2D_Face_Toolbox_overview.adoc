@@ -1,117 +1,72 @@
 = 2D face image toolbox
 
 == Overview
-There are two categories of face artefact that can be used for presentation attack. First one is two-dimensional face artefact such as printed photo of a target user and the another is, for example, a face mask that mimics three-dimensional geometry of a user's face. This toolbox describes 2D face artefacts that the evaluator shall create for the testing.   
-
+There are two categories of face artefact that can be used for presentation attack. First one is two-dimensional face artefact such as printed photo of a target user and the another is, for example, a face mask that mimics three-dimensional geometry of a user’s face. This toolbox describes 2D face artefacts that the evaluator shall create for the PAD testing.
 There are also two types of face biometric verification method, 2D or 3D image-based methods. 2D image-based method captures a two-dimensional face image by a sensor using visible light to recognize a person, however 3D image-based method creates three-dimensional model of the human face using a 3D scanner such as a depth camera.
+The evaluator shall refer this toolbox and 3D image face toolbox to create and test face artefacts if the TOE implements 2D based face verification method only, however, refer 3D image face toolbox if the TOE implements 3D based verification method or mixture of 2D and 3D based verification method.
 
-The evaluator shall refer this toolbox and 3D image face toolbox to create and test face artefacts if the TOE implement 2D based face verification method, however, refer only 3D image face toolbox if the TOE uses 3D based verification method.  
- 
 == Face presentation attack
 There are many research papers that study face presentation attack and researchers create 2D face artefacts through the following process.
 
 . Capture face images of a target user using a camera
-. Print or display captured image using such as a printer or screen to create artefacts
-. Present artefacts to the TOE under different conditions
+
+. Print or display captured image on a paper or screen that is called a 2D face artefact
+
+. Present a 2D face artefact to the TOE
 
 Presentation attack with 2D face artefacts can be categorized into the following three types based on tools or materials used.
 
-. printed photo attack  
+* printed photo attack
 +
 An attacker attempts to spoof the TOE using a captured face image printed on a paper
-. digital photo attack  
+
+* digital photo attack
 +
 An attacker attempts to spoof the TOE using a captured face image displayed on a screen
-. replay video attack
+
+* replay video attack
 +
 An attacker attempts to spoof the TOE using a recorded face video replayed on a screen
 
 == Face presentation attack detection
-Images captured by the TOE from the artefact may visually look very similar to the images captured from a real human, however, they are not exactly the same. For example, printed or displayed images on the paper or screen reflect light in different ways because a human is a complex non-rigid 3D object, whereas the photo or screen can be seen as a planar rigid object. The surface properties of real faces and fake ones, e.g. pigments, are also different. In addition, artefacts may contain moir ́e patterns that are an undesired aliasing of images produced during various image display and image acquisition processes. The TOE can detect such differences between images taken from real human and artefacts to prevent the presentation attacks. 
+Images captured by the TOE from the 2D face artefacts may visually look very similar to the images captured from a real human, however, they are not exactly the same. For example, printed or displayed images on the paper or screen reflect light in different ways because a human is a complex non-rigid 3D object, whereas the photo or screen can be seen as a planar rigid object. The surface properties of real faces and face artefacts, e.g. pigments, are also different. In addition, face artefacts may contain moir ́e patterns that are an undesired aliasing of images produced during various image display and image acquisition processes. The TOE can detect such differences between images taken from real human and artefacts to detect and prevent the presentation attacks.
 
-== Influential factors of artifact production and presentation 
-Face artefacts can be created in a variety of ways (e.g. using different camera such as smartphone camera or dSLR camera) and the following table summarize factors that may affect performance of the PAD algorithm.
+== Common test protocol
+Face PAD testing can be done in a variety of ways. The evaluator can use different type of cameras under different illumination to capture face images of test users to create face artefacts. The evaluator can also present these artefacts under different condition. It’s not possible to cover all such possible test scenarios and this toolbox defines the common test protocol to maintain consistency among different PAD testing but also enable to conduct the testing efficiently referring research papers. The evaluator shall follow the test protocols describe below, in addition to guidance provided in <<Toolbox Overview>> to conduct the PAD testing.
 
+. Enrollment
++
+.. The evaluator shall turn on the face unlock and enroll the test users following instructions provided by the AGD guidance (e.g. test users should not wear glasses, hat, or heavy make-up during the enrolment if the guidance instructs not to do so).
++
+.. The evaluator shall enroll test users’ expressionless faces under the controlled environment where the background of the scene is uniform, the light in the office is switched on and the window blinds are down. 
 
-.Influential factors
-|===
-|# |Factor |Description
+. Face image capture
++
+.. The evaluator shall capture face images right after the enrolment of test users under the same condition to reduce the possibility that the artefacts are rejected because of the difference of illumination, background scene and expression.
++
+.. The evaluator shall capture test users’ face images by a normal and high quality camera for printed and digital photo attack. The evaluator shall also record test users’ faces for ten seconds for reply video attack. Definition of normal and high quality is explained in Section X and specification of tools is defined in <<2D face image toolbox inventory>>.
 
-|1
-|Specification of tools
-|For example, the quality of digital photo depends on resolution of a screen. If the screen is 4K that refers to a horizontal screen resolution in the order of 4,000 pixels, it can provide the finest clarity and detail of the face image
+. Artefact creation
++
+.. The evaluator shall print face images for printed photo attack, display them on a screen for digital photo attack and replay them on a screen for replay video attack. Size of face images on artefacts shall be same as the test user’s face.
++
+.. The evaluator shall use those tools that meet specification defined in <<2D face image toolbox inventory>> to create artefacts.
 
-|2
-|Environmental condition 
-|Brightness of face image captured depends on illumination condition.  Background scene may also influence the performance of the PAD algorithm 
+. Artefact presentation
++
+.. The evaluator shall present artefacts to the TOE under the same controlled environment.
++
+.. The evaluator shall adjust the distance between artefacts and the TOE so that the TOE can’t see the edge of artefacts.
++ 
+.. The evaluator shall present artefacts in a way to minimize the reflection from ambient lighting.
++
+.. The evaluator shall present artefacts by hand for printed and digital photo attack to introduce some noticeable motion and by tripod for replay video attack.
 
-|3
-|Presentation method
-|Face artefact can be presented by hand or by tripod
+== Specification of tool
+The evaluator needs to use several tools, such as camera, screen or printer and specification of tools affect clarity or sharpness of face artefacts. For example, the quality of digital photo depends on resolution of a screen. If the screen is 4K that refers to a horizontal screen resolution in the order of 4,000 pixels, it can provide the finest clarity and detail of the face image.
+This toolbox defines two level of tools, normal and high quality, to cover variety of tools to conduct the PAD testing efficiently. Normal quality tools are inexpensive, and anyone can use them easily to capture and upload face images on the SNS. The attacker can also create face artefacts with such uploaded face images without any difficulty. Successful presentation attacks using uploaded face images are widely known and detail attack method is published on the Internet, so the evaluator shall try this type of artefacts first. On the other hand, high quality tools have better performance (e.g. higher resolution) than normal ones and should be the latest tools (i.e. released at least within one or two years from the date of PAD testing). Those tools may be expensive but should be able to rent at affordable cost. The reason why such tools should be used is that the PAD algorithm normally shows good performance for artefacts used to train the algorithm however less performance for ones the algorithm has never seen before. The evaluator shall create such artefacts that can most likely bypass the PAD using the latest high-end tools. Specification of normal and high quality tool is defined in <<2D face image toolbox inventory>>.
 
-|===
-
-
-
-| No	| Factor	| Description |
-|-------|---------------|-------------|
-|1	|Quality of source face image from which the PAI is created | The quality of the source is the foundation of the copy (i.e. PAI). If the source image is poor quality, the quality of PAI will also be limited. Source images can be taken with a digital camera and quality of digital image varies depending of quality of the camera (e.g. size of sensor and resolution) |
-|2	| Quality of tools (e.g. printer and spoofing medium) to create the PAI | A poor quality PAI can be made from a good quality source if the resolution of the printer or screen is low. However, if the screen is 4K resolution that refers to a horizontal screen resolution in the order of 4,000 pixels, it can provide the finest clarity and detail of the face from the good quality source. |
-
-Various quality of PAIs can be created with, for example, smartphone cameras, compact or high-professional digital cameras however, it’s time consuming to create all possible PAIs using different devices. Therefore, this evaluation activity sets the two level of quality, normal and high, to cover those variety of PAIs. High quality PAIs looks more similar to the real face however, it may show more micro facial textures that can be used to differentiate between the real and fake. However, such micro textures may not be evident in the normal quality PAIs. The TOE may overlook normal quality PAIs if the PAD algorithm completely relies on such micro textures to detect the PAIs. So, this evaluation activity requires to test both levels of quality of PAIs.
-
-| Quality | Description |
-|---------|-------------|
-| Level 1 | Evaluator shall use standard tools (e.g. smartphone, printer or laptop screen) that meet the specification defined in this evaluation activity to create the PAI. All tools are normally available at home.  |
-| Level 2 | Evaluator shall use standard tools (e.g. smartphone, printer or laptop screen) that meet the specification defined in this evaluation activity to create the PAI. All tools are normally available at home or office.|
-| Level 3 | Evaluator shall use high-end tools that meet the specification defined in this evaluation activity to create the PAI. All tools are the best quality ones like high-end production printer that may cost several thousands of dollars. However, such high-end tools can be borrowed at rental shops or used through online service (e.g. online printing service) at inexpensive price and evaluator can utilize such services to create the PAI at low cost.|
-
-Various quality of PAIs can be created with, for example, smartphone cameras,
-compact or high-professional digital cameras however, it’s time consuming to
-create all possible PAIs using different tools. Therefore, this EA categorizes
-the tools into two or three levels to cover those variety of PAIs.
-
-High quality PAIs looks more similar to the real face however, it may show more
-micro facial textures that can be used to differentiate between the real and
-fake. However, such micro textures may not be evident in the low quality PAIs.
-The TOE may overlook such low quality PAIs if the PAD algorithm completely relies
-on micro textures to detect the PAIs. So, this EA requires the evaluator to test all
-PAIs as specified in C.1.2.2. However, the evaluator can omit some of them if the
-evaluator has a valid rationale based on information gained from the developer.
-
-Category | Level 1 | Level 2 | Level 3
---- | --- | --- | ---
-Camera | Front-facing device camera | Digital Camera (min resolution = device resolution) | DSR 40+ MP
-Scanner | 300 DPI | 600 DPI | 1200 DPI
-Printer | Home SoHo Inkjet | Color Laser | Printing Service
-Paper | Standard Letter (24lb weight equivalent) | Photo paper | N/A
-Computing resources | Mobile device | PC or laptop | Professional
-Output Screen | 1080p 10" | 1080p -> 2160p under 20" | 4K above 24"
-
-Within these categories, individual modality toolboxes may have more specific requirements based on the details of the specific modality.
-
-### Test protocols
-The following describes the test protocol that evaluator shall follow. If the Security Target allows multiple settings for security relevant parameters, all tests have to be conducted for all possible configurations.
-
-1) Enrollment
-Evaluator turns on the appropriate biometric unlock and registers the test user following instructions provided by the mobile device and manual (i.e. test user should not wear glasses, hat, or heavy make-up during the enrollment if the guidance instructs not to do so) under the controlled environment where the background of the scene is uniform, the light in the office is switched on and the window blinds are down.
-
-2) Creating the source still and video digital image
-Digital image of target user’s biometric that meet the following conditions shall be taken for each quality level:
-   1. captured by the camera that meets the specification defined in each quality level
-   2. digital image was taken under controlled environment where the background of the scene is uniform, the light in the office is switched on and the window blinds are
-down
-   3. digital image is taken right after the target user’s enrolment and under the same condition (i.e. under controlled environment) to reduce the possibility that the PAI is rejected because of the difference of the background scene or expression
-   4. target user’s biometric occupies about 20% of the full image
-   5. digital image includes user’s full biometric (i.e. face, finger, hand)
-   6. for reply video attack, video length shall be limited to ten seconds
-
-
-3) Creating the PAI
-Source digital image shall be printed and displayed on the spoofing mediums (i.e. paper or screen) that meet the specification defined in each quality level.
-
-4) Presenting the PAI to the TOE
-Evaluator shall present the mobile device to the fixed and stationary spoofing mediums by hand at controlled environment for printed and digital photo attack to introduce some noticeable motion of the PAIs. For replay video attack, both of the spoofing medium and the PAI shall be stationary. Evaluator shall adjust the distance between the spoofing mediums and the TOE so that the device camera can’t see the edge of spoofing mediums. Evaluator shall also present the spoofing mediums in a way to minimize the reflection from ambient lighting.
+### Number of trials
 
 ### Number of trials
 Evaluator shall conduct the testing with five users. Two source images shall be taken for quality level and two spoofing mediums (i.e. Level 1 of photo and screen, Level 2 of photo and screen and Level 3 of photo and screen) shall be used for each user. 20 presentations shall be made for each PAI changing the distance between the TOE and spoofing medium (i.e. 180 presentations shall be made for each user)
