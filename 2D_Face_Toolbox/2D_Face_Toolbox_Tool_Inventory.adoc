@@ -1,8 +1,8 @@
 = 2D Face Toolbox Inventory
 
-This document specify specification of tools that are used to create artefacts. There are two types of tools, Type 1 and Type 2. The evaluator shall create normal quality of face artefacts using Type 1 tools and high quality face artefacts with Type 2 tools. Specification of each tool is specified in the following table.
+This document specify requirements for tools that are used to create artefacts. There are two types of tools, Type 1 and Type 2. The evaluator shall create normal quality of face artefacts using Type 1 tools and high quality face artefacts with Type 2 tools. Requirement for each tool is specified in the following table.
 
-The evaluator may use any tools to create 2D face artefacts only as long as they meet the specification below. The evalautor may use any available services (e.g. rental service) to get any tools in cost effective way.
+The evaluator may use any tools to create 2D face artefacts only as long as they meet requirements below. The evalautor may use any available services (e.g. rental service) to get any tools in cost effective way.
 
 .Tool specification
 [cols="4*"]
@@ -17,14 +17,10 @@ a|Rear-facing camera of a movile device
 * The evaluator shall not use the same movile device on which the TOE is installed.
 * New movile device shall be purchasable at the date of testing.
 * Camera's resolution should be the same level or higher than the TOE's sensor used for face biometric verification.
-* The evaluator shall refer publicly available information to change default setting of camera and take the best quality of face images. 
-* The evaulator shall take at least three photos or videos from which the bese one is selected to create a face artefact. 
 a|dSLR camera
 
 * New dSLR shall be purchasable at the date of testing and the camera was released within 1 year from the date of testing.
 * Camera's resolution shall be at least 3 times higher than the TOE's sensor used for face biometric verification.
-* The evaluator shall refer publicly available information to change default setting of camera and take the best quality of face images.
-* The evaulator shall take at least three photos or videos from which the bese one is selected to create face artefact.
 
 | T.2 
 | Printer             
@@ -32,8 +28,6 @@ a|Home SoHo Inkjet printer
 
 * New printer shall be purchasable at the date of testing.
 * Test user's face shall be printed on a paper in full scale.
-* The evaluator shall refer publicly available information to change default setting of printer and print the best quality of face images.
-
 a|Net print service
 
 * Test user's face shall be printed on a paper in full scale.
@@ -46,7 +40,7 @@ a|Matte paper
 
 * Paper shall be wide enough to include a test user's face in full scale.
 
-a|Paper recommend by net print service
+a|Paper recommend by net print service selected
 
 * Paper shall be wide enough to include a test user's face in full scale.
 * The evaluator shall select the best paper type to print the best quality of face images.
