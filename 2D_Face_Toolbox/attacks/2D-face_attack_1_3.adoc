@@ -14,9 +14,9 @@ Target user's face
 Type 1 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper)
 
 == Recipe
-The evaluator shall record a face image and display it on a mobile device screen. 
+The evaluator shall record a face image and replay it on a mobile device screen. 
 
-The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS) and mobile device to create clearer face artefacts.
+The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS(Frames Per Second)) to create clearer face artefacts.
 
 The evaulator shall take at least three videos and select the best one to create each face artefact.
 
@@ -25,7 +25,7 @@ The evaluator shall consider to change the following factors for penetration tes
 
 * Configuration of tool
 +
-The evaluator can change, for example, FPS (Frames Per Second) or ISO number of camera to change quality of face images. Such change may affect the texture of artefacts that may lead to false acceptance. 
+The evaluator can change, for example, color effect of camera to change quality of face images. Such change may affect the texture of artefacts that may lead to false acceptance. 
 
 * Presentation method
 + 
@@ -35,7 +35,7 @@ As described in <<BIOSD>>, the evaluator can change the distance between the art
 The evaluator shall enrol test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
 
 == Presentation
-The evaluator shall present a mobile device screen by hand as described in <<2DFaceOverview>>.
+The evaluator shall present a mobile device screen by tripod for 10 seconds as described in <<2DFaceOverview>>.
 
 == Attack Potential
 The attack potential that is required to build this artefact is summarized in the following table. See <<SD>> Section 9 for more information about how to caluculate the attack potential. 
