@@ -16,7 +16,7 @@ Type 1 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper)
 == Recipe
 The evaluator shall capture a face image and display it on a mobile device screen. 
 
-The evaluator shall refer publicly available information to change default setting of the camera (e.g. picuture size) to create clearer face artefacts.
+The evaluator shall refer publicly available information to change default setting of the camera (e.g. picture size) to create clearer face artefacts.
 
 The evaulator shall take at least three photos and select the best one to create each face artefact.
 
