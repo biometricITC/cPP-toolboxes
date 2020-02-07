@@ -1,0 +1,33 @@
+= 2D face image verification list
+:showtitle:
+:revdate: 2020-02-07
+
+This shows the set of test items for 2D face image modalities.
+
+.Test items
+[cols="30,70"]
+|===
+|No.
+|Attack type
+
+|2D Face 1-1
+|link:2D_Face_Toolbox/attacks/2D-face_attack_1_1.adoc[Printed photo attack, Normal quality]
+
+
+|2D Face 1-2
+|link:2D_Face_Toolbox/attacks/2D-face_attack_1_2.adoc[Digital photo attack, Normal quality]
+
+
+|2D Face 1-3
+|link:2D_Face_Toolbox/attacks/2D-face_attack_1_3.adoc[Replay video attack, Normal quality]
+
+|2D Face 2-1
+|link:2D_Face_Toolbox/attacks/2D-face_attack_2_1.adoc[Printed photo attack, High quality]
+
+|2D Face 2-2
+|link:2D_Face_Toolbox/attacks/2D-face_attack_2_2.adoc[Digital photo attack, High quality]
+
+|2D Face 2-3
+|link:2D_Face_Toolbox/attacks/2D-face_attack_2_3.adoc[Replay video attack, High quality]
+
+|===
