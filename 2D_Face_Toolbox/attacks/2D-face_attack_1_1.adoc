@@ -5,13 +5,13 @@
 Printed photo attack, Normal quality
 
 == Overview
-The evaluator prints target user's face on the paper and present it to the TOE
+The evaluator caputures and prints target user's face on the paper and present it to the TOE.
 
 == Input
 Target user's face
 
 == Tools
-Type 1 tools in <<2DFaceInventory>>
+Type 1 tools in <<2DFaceInventory>> except T.4 (Screen)
 
 == Recipe
 The evaluator shall capture a face image and print it on a paper. 
@@ -38,22 +38,46 @@ The evaluator shall enrol test users first as described in <<2DFaceOverview>>. I
 The evaluator shall present a printed photo by hand as described in <<2DFaceOverview>>.
 
 == Attack Potential
-The attack potential that is required to build this artefact is summarized in the following table. 
+The attack potential that is required to build this artefact is summarized in the following table. See <<SD>> Section 9 for more information about how to caluculate the attack potential. 
 
+[cols=",,",options="header",]
 .Attack Potential
-[options="header,footer"]
 |=======================
-|Factor|Value
-2+|*Elapsed Time*
-|<= one week  |1     
-2+|*Expertise*    
-|Layman   |0     
-2+|*Knowledge of TOE*    
-|Public   |0 
-2+|*Window of Opportunity*   
-|Unnecessary   |0
-2+|*Equipment*
-|Standard   |0 
+|Factor |Value |
+| |Identification |Exploitation
+
+|*Elapsed Time*
+|<= one week (1) 
+|<= one day (0)
+
+|*Expertise*
+|<= Layman (0) 
+|<= Layman (0)
+ 
+|*Knowledge of TOE*    
+|Public (0)   
+|N/A
+
+a|
+*Window of Opportunity*
+
+*(Access to TOE)* 
+|Easy (0)
+|Moderate (4)
+
+a|
+*Window of Opportunity*
+
+*(Access to Biometric Characteristics)* 
+|N/A
+|Immediate (0)
+
+|*Equipment*
+|Standard (0)   
+|Standard (0) 
+
+3+^.^|Total Attack Potential = 5 < Basic Attack Potential
+
 |=======================
 
 == Pass Criteria
