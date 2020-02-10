@@ -42,7 +42,7 @@ This section categorizes tools and materials that the evaluator shall use to cap
 _modality name_ Verification List::
 This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<SD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing. 
 
-References::
+_modality name_ References::
 This section lists all publicly available information referred to create a toolbox.
 
 Test items::
@@ -199,7 +199,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 The maximum number of attempts allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, independent test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
 
 == Guidance for Penetration Testing (AVA_VAN.1)
-The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<SD>> Section 6, the evaluator shall select those artefacts that show higher attack presentation match rate during independent testing or higher quality artefacts.
+The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<SD>> Section 6, the evaluator shall select those artefacts that show higher imposter attack presentation match rate during independent testing or higher quality artefacts.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
