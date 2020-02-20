@@ -82,7 +82,7 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Detail instruction to present artefact to the TOE
 
 |*Hints for penetration testing and attack potential rating*
-|Suggestions that evaluator should consider to device penetration tests from this test and attack potential rating that the evaluator shall use for AVA_VAN.1 evaluation for those penetration tests 
+|Suggestions that evaluator should consider to devise penetration tests from this test item and attack potential rating that the evaluator shall use for AVA_VAN.1 evaluation for those penetration tests 
 
 |*Pass Criteria*
 |If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<SD>> Section 9.3 for penetration testing  
