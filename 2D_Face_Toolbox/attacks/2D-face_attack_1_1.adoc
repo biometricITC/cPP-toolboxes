@@ -21,6 +21,18 @@ The evaluator shall refer publicly available information to change default setti
 The evaulator shall take at least three photos and select the best one to create each face artefact.
 
 == Variations
+
+=== Variation 1 (2D Face 2-1)
+This variant uses Type 2 tools in <<2DFaceInventory>> except T.4 (Screen) to conduct high qulaity printed photo attacks.
+
+== Prerequisite
+The evaluator shall enrol test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
+
+== Presentation
+The evaluator shall present a printed photo by hand as described in <<2DFaceOverview>>.
+
+== Hints for penetration testing and attack potential rating
+=== Hints for penetration testing
 The evaluator shall consider to change the following factors for penetration testing.
 
 * Configuration of tool
@@ -31,13 +43,7 @@ The evaluator can change, for example, color effect of camera to change quality 
 + 
 As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. In addtion to that, the evaluator can deliberately warps a printed photo, trying to simulate facial motion (Warped photo attack). The evaluator can also cut off the eye regions of a printed photo, hide behind and exhibit blinking through the holes (Cut photo attack).  
 
-== Prerequisite
-The evaluator shall enrol test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
-
-== Presentation
-The evaluator shall present a printed photo by hand as described in <<2DFaceOverview>>.
-
-== Attack Potential
+=== Attack potential rating
 The attack potential that is required to build this artefact is summarized in the following table. See <<SD>> Section 9 for more information about how to caluculate the attack potential. 
 
 [cols=",,",options="header",]
