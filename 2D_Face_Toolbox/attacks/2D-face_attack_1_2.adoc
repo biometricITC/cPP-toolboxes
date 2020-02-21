@@ -30,8 +30,8 @@ The evaluator shall enrol test users first as described in <<2DFaceOverview>>. I
 == Presentation
 The evaluator shall present a mobile device screen by hand as described in <<2DFaceOverview>>.
 
-== Hints for penetration testing and attack potential rating
-=== Hints for penetration testing
+== Penetration Testing and Attack Potential Rating Suggestions
+=== Penetration Testing Suggestion
 The evaluator shall consider to change the following factors for penetration testing.
 
 * Configuration of tool
@@ -42,8 +42,8 @@ The evaluator can change, for example, color effect of camera to change quality 
 + 
 As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. 
 
-=== Attack potential rating
-The attack potential that is required to build this artefact is summarized in the following table. See <<SD>> Section 9 for more information about how to caluculate the attack potential. 
+=== Attack Potential Rating Suggestion
+The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to caluculate the attack potential. 
 
 [cols=",,",options="header",]
 .Attack Potential
