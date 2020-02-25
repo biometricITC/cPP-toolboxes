@@ -54,37 +54,37 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Sub-section name 
 |Description
 
-|Number
+|*Number*
 |Identification number of test
 
-|Attack type
+|*Attack type*
 |Category of attack
 
-|Overview
+|*Overview*
 |General overview of test
 
-|Input
+|*Input*
 |Required input to produce artefacts
 
-|Tools
+|*Tools*
 |Required tools to capture a image of biometric characteristics and produce artefacts
 
-|Recipe
+|*Recipe*
 |Procedure to create artefacts
 
-|Variations
-|Variations of tests that the evaluator should consider AVA_VAN.1 evaluation
+|*Variations*
+|Variant of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different *Recipe* or with different *Tools* specified here for the independent testing.
 
-|Prerequisite
+|*Prerequisite*
 |Any conditions that should meet to perform each test
 
-|Presentation
+|*Presentation*
 |Detail instruction to present artefact to the TOE
 
-|Attack Potential
-|Attack potential rating that the evaluator shall use for AVA_VAN.1 evaluation
+|*Penetration Testing and Attack Potential Rating Suggestions*
+|Suggestions that evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification 
 
-|Pass Criteria
+|*Pass Criteria*
 |If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<SD>> Section 9.3 for penetration testing  
 
 |===
