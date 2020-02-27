@@ -1,10 +1,10 @@
 = 2D face image toolbox inventory
 
-This document specify requirements for tools that are used to create 2D face image artefacts. There are two types of tools, Type 1 and Type 2. The evaluator shall create normal quality of face artefacts using Type 1 tools and high quality face artefacts with Type 2 tools. Requirement for each tool is specified in the following table.
+This document specifies requirements for tools that are used to create 2D face image artefacts. There are two types of tools, Type 1 and Type 2. The evaluator shall create normal quality of face artefacts using Type 1 tools and high quality face artefacts with Type 2 tools. Requirement for each tool is specified in the following table.
 
 The evaluator may use any tools to create 2D face artefacts as long as they meet requirements specified below. The evalautor may use any available services (e.g. rental service) to prepare any tools in cost effective way.
 
-The evaluator may need to use other tools that are not specified here. For example, the evaluator may connect the camera to the TV directly to replay the face image on the 4K screen. But she can also prepare the PC and viewer software and import movie file from the camera to the PC and replay it on the 4K PC screen. In such cases, the evaluator may use any PC and viewer software, however, the evaluator shall visually check the final image on the screen and if the evalautor see any problem (e.g. choppy video playback because of weak cpu power), the evaluator shall replace them with right ones.  
+The evaluator may need to use other tools that are not specified here. For example, the evaluator may connect the camera to the TV directly to replay the face image on the 4K screen. But she can also prepare the PC and viewer software and import movie file from the camera to the PC and replay it on the 4K PC screen. In such cases, the evaluator may use any PC and viewer software, however, the evaluator shall visually check the final image on the screen and if the evaluator sees any problem (e.g. choppy video playback because of weak CPU power), the evaluator shall replace them with right ones.  
 
 .Tool requirement
 [cols="4*"]
@@ -14,10 +14,10 @@ The evaluator may need to use other tools that are not specified here. For examp
 
 | T.1 
 | Camera    
-a|Rear-facing camera of a movile device  
+a|Rear-facing camera of a mobile device  
 
-* The evaluator shall not use the same movile device on which the TOE is installed.
-* New movile device shall be purchasable at the date of testing.
+* The evaluator shall not use the same mobile device on which the TOE is installed.
+* New mobile device shall be purchasable at the date of testing.
 * Camera's resolution should be the same level or higher than the TOE's sensor used for face biometric verification.
 a|dSLR camera
 
