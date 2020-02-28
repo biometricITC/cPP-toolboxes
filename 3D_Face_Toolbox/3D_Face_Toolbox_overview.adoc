@@ -11,14 +11,15 @@ There are three categories of 3D face artefacts or masks studied in existing res
 +
 Printed photo is bent and worn as a face mask to create the illusion of 3D in a real face.
 
-- 3D face mask from 2D face image
+- 3D face mask or head from 2D face image
 +
-Predict the 3D features of the face from a single 2D image or photo and create 3D face masks from the predicted 3D face image.
-- 3D face mask from 3D face image
-+
-Get a 3D face image through a 3D scan of the face or using molding material and create 3D face masks from the actual 3D image of a target user’s face.
+Predict the 3D features of the face from 2D images and create a 3D face mask or head from the predicted 3D face image.
 
-The last category, 3D face mask from 3D face image, is also out of scope of this toolbox because it’s beyond the scope of Basic attack potential. As described in <<BIOSD>>, the attack potential shall be rated as follows.
+- 3D face mask or head from 3D face image
++
+Get a 3D face image through a 3D scan of the face or using molding material and create a 3D face mask or head from the actual 3D image of a target user’s face.
+
+The last category, 3D face mask or head from 3D face image, is also out of scope of this toolbox because it’s beyond the scope of Basic attack potential. As described in <<BIOSD>>, the attack potential shall be rated as follows.
 
 -	*Elapsed time* for *Identification*
 +
@@ -28,7 +29,7 @@ The last category, 3D face mask from 3D face image, is also out of scope of this
 +
 *Moderate* (4)
 
-In addition to them, following factors for creating a 3D face mask from 3D face image should be rated as follows.
+In addition to them, following factors for creating a 3D face mask or head from 3D face image should be rated as follows.
 
 -	*Window of Opportunity (Access to Biometric Characteristics)*
 +
@@ -36,24 +37,33 @@ In addition to them, following factors for creating a 3D face mask from 3D face 
 
 -	*Expertise* for *Identification*
 +
-*Proficient* (2), because using a 3D scanner and 3D printer or using molding material and resin for creating sufficient quality of 3D face masks requires some level of knowledge and experiences that the Layman doesn’t has.
+*Proficient* (2), because using a 3D scanner and 3D printer or using molding material and resin for creating sufficient quality of 3D face mask or head requires some level of knowledge and experiences that the Layman doesn’t has.
 
-In total, the attack potential for 3D face mask from 3D face image is at least 11, that is beyond the Basic attack potential (10). 
-This is the reason why this toolbox excludes this type of artefacts. However, both Printed Face mask and 3D face mask from 2D face image 
-is within the scope of the Basic attack potential because only 2D image of target face is required to create both face artefact, 
-because *Window of Opportunity (Access to Biometric Characteristics)* should be rated as *Immediate* (0).
+In total, the attack potential for 3D face mask or head from 3D face image is at least 11, that is beyond the Basic attack potential (10). This is the reason why this toolbox excludes this type of artefacts. However, both Printed Face mask and 3D face mask or head 
+from 2D face image is within the scope of the Basic attack potential because only 2D images of target face is required to create 
+both face artefacts, so *Window of Opportunity (Access to Biometric Characteristics)* should be rated as *Immediate* (0).
 
-3D face presentation attack can be conducted through the following process using 3D face masks described above.
+3D face presentation attack can be conducted through the following process using 3D face mask or head described above.
 
 . Capture face images of a target user using a camera
 
-. Print captured image on a paper for Printed Face mask, or convert the captured 2D image to 3D image and create a face mask for 3D face mask from 2D face image
+*Printed Face mask*
+
+[start=2]
+. Print captured image on a paper
 
 . Wear a face mask and present it to the TOE
 
+*3D face mask or head from 2D face image*
+
+[start=2]
+. Reconstruct the 3D face from 2D face images and create a 3D face mask or head
+
+. Wear a face mask and present it to the TOE or preset the 3D head to the TOE
+
 == Face presentation attack detection
-The 3D face mask contains the quality defect that results in the appearance difference from a genuine face. For example, the skin 
-texture and detailed facial structures in masks have perceivable differences compared to those in real faces. The 3D face mask also lacks the facial motion such as facial expression changes, eye blinks and mouth movements because it is made of hard materials. Several PAD methods that utilize such cues have been studied and reported by researchers. Other PAD methods utilize liveness cues such as thermal signatures, gaze information, pulse or heartbeat signals to detect 3D face masks. However, normally such design information of the PAD is not available to the evaluator and he or she needs to test the TOE in black box manner.
+The 3D face mask or head contains the quality defect that results in the appearance difference from a genuine face. For example, the skin 
+texture and detailed facial structures in mask or head have perceivable differences compared to those in real faces. The 3D face mask or head also lacks the facial motion such as facial expression changes, eye blinks and mouth movements because it is made of hard materials. Several PAD methods that utilize such cues have been studied and reported by researchers. Other PAD methods utilize liveness cues such as thermal signatures, gaze information, pulse or heartbeat signals to detect 3D face mask or head. However, normally such design information of the PAD is not available to the evaluator and he or she needs to test the TOE in black box manner.
 
 == Common test protocol
 Test protocol is quite similar as one defined in <<2DFaceOverview>>. This section only shows the differences between the two.
@@ -68,30 +78,30 @@ This attack is almost same as the printed photo attack except the evaluator shal
 +
 .. The evaluator shall present a Printed Face mask in a way to minimize the reflection from ambient lighting.
 
-=== Presentation attack with 3D face mask from 2D face image
-This evaluator shall create and wear a 3D face mask. So, the method of creation and presentation are different from ones in <<2DFaceOverview>>.
+=== Presentation attack with 3D face mask or head from 2D face image
+For this attack, the method of creation and presentation are different from ones in <<2DFaceOverview>>.
 
 [start=3]
 . Artefact creation
 +
-.. The evaluator shall generate a 3D face image from a captured 2D face images using software tools. 
+.. The evaluator shall reconstruct a 3D face from captured 2D face images using software tools. 
 +
-.. The evaluator shall create a 3D face mask from the image using 3D printer. Size of face mask shall be same as the test user’s face.
+.. The evaluator shall create a 3D face mask or head from the image using a 3D printer. Size of face mask or head shall be same as the test user’s face.
 +
-.. The evaluator shall use those tools that meet requirements defined in <<3DFaceInventory>> to create artefacts.
+.. The evaluator shall use those tools that meet requirements defined in <<3DFaceInventory>> to create a 3D face mask or head.
 
 . Artefact presentation
 +
-.. The evaluator shall wear a 3D face mask and present it to the TOE under the same controlled environment.
+.. The evaluator shall wear a 3D face mask and present it to the TOE or present the 3D head to the TOE under the same controlled environment.
 +
 + 
-.. The evaluator shall present a 3D face mask in a way to minimize the reflection from ambient lighting.
+.. The evaluator shall present a 3D face mask or head in a way to minimize the reflection from ambient lighting.
 
 == Requirement for tools
-Requirement for tools for Printed Face mask is same as ones defined for printed photo attack in <<2DFaceInventory>>. The evaluator shall 
-create normal and high quality printed photo and wear it instead of presenting it by hand.
+Requirement for tools for Printed Face mask is same as ones defined for printed photo attack in <<2DFaceInventory>>. 
+The evaluator shall create normal and high quality printed photos.
 
-Creation of a 3D face mask from 2D face image requires different type of tools. Number of such tools is limited so <<3DFaceInventory>> defines just one type of tools. 
+Creation of a 3D face mask or head from 2D face image requires different type of tools. Number of such tools is limited so <<3DFaceInventory>> defines just one type of tools. 
 
 == Test items
 The evaluator shall create artefacts defined in all test items listed in <<3DFaceList>>. <<ToolOverview>> defines required number of attempts for the independent testing and maximum timeframe for both independent and penetration testing.
