@@ -79,14 +79,14 @@ This attack is almost same as the printed photo attack except the evaluator shal
 .. The evaluator shall present a Printed Face mask in a way to minimize the reflection from ambient lighting.
 
 === Presentation attack with 3D face mask or head from 2D face image
-For this attack, the method of creation and presentation are different from ones in <<2DFaceOverview>>.
+For this attack, the method of creation and presentation are different from ones in <<2DFaceOverview>>. Next section explains about production methods of 3D face mask or head. 
 
 [start=3]
 . Artefact creation
 +
-.. The evaluator shall reconstruct a 3D face from captured 2D face images using software tools. 
+.. The evaluator shall reconstruct a 3D face from captured 2D face. 
 +
-.. The evaluator shall create a 3D face mask or head from the image using a 3D printer. Size of face mask or head shall be same as the test user’s face.
+.. The evaluator shall create a 3D face mask or head from the 3D image. Size of face mask or head shall be same as the test user’s face.
 +
 .. The evaluator shall use those tools that meet requirements defined in <<3DFaceInventory>> to create a 3D face mask or head.
 
@@ -94,14 +94,41 @@ For this attack, the method of creation and presentation are different from ones
 +
 .. The evaluator shall wear a 3D face mask and present it to the TOE or present the 3D head to the TOE under the same controlled environment.
 +
-+ 
 .. The evaluator shall present a 3D face mask or head in a way to minimize the reflection from ambient lighting.
+
+=== Guidance for production methods of 3D face mask or head from 2D face image
+
+The 3D facial geometry can be recovered from one or more 2D face images by 3D face reconstruction method. There are several reconstruction methods such as 3D Morphable Model and Shape-from-shading, however, the evaluator doesn’t need to examine and select the best one with minimum reprojection error because such tasks require higher attack potential than one that the TOE must resist. Instead, the evaluator shall select the easiest and feasible way to create the 3D face mask or head in limited time period at affordable cost. 
+
+There are two ways to create a 3D face mask or head.
+
+-	Use reconstruction software and 3D printer
++
+The evaluator may use software to reconstruct a 3D face from one or more photos and generate a 3D file for creating 3D mask or head by 3D printer.
+
+-	Outsource it from a third party
++
+Instead of making a 3D head by her/himself, the evaluator can order a company to make a 3D mask or head from one or more photos.
+
+The evaluator shall prepare three test subjects and produce three artefacts from each test subject for the independent testing and use the same artefacts with increasing number of attempts or create additional new artefacts for the penetration testing, as described in <<ToolOverview>>. There may be many 3D face mask or head production methods at the time of testing. The evaluator shall follow the guideline below to create 3D face masks or heads.
+
+-	Timeframe and cost
++
+The evaluator shall follow the recommended test period (i.e. one week) to conduct the PAD independent and penetration testing.
+
+-	3D face mask or head production methods 
++
+The evaluator should consider covering variety of production methods of 3D face mask or head as much as possible. For example, the evaluator may outsource the 3D face mask or head for one test subject from a third party and create masks or heads for the other two subjects by her/himself with reconstruction software and 3D printer. 
+
+-	Number of photos
++
+The evaluator shall only use three photos (i.e. frontal, right and left profile image) to reconstruct 3D face. 
 
 == Requirement for tools
 Requirement for tools for Printed Face mask is same as ones defined for printed photo attack in <<2DFaceInventory>>. 
 The evaluator shall create normal and high quality printed photos.
 
-Creation of a 3D face mask or head from 2D face image requires different type of tools. Number of such tools is limited so <<3DFaceInventory>> defines just one type of tools. 
+Minimum requirements for tools such as materials for 3D mask or head is defined in <<3DFaceInventory>>. If the evaluator outsources it from a third party, the evaluator shall follow instructions from the third parity when capturing photos (e.g. lightning condition) and provide only three photos at maximum to them.
 
 == Test items
 The evaluator shall create artefacts defined in all test items listed in <<3DFaceList>>. <<ToolOverview>> defines required number of attempts for the independent testing and maximum timeframe for both independent and penetration testing.
