@@ -16,23 +16,23 @@ Type 1 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper)
 == Recipe
 The evaluator shall record a face image and replay it on a mobile device screen. 
 
-The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS(Frames Per Second)) to create clearer face artefacts.
+The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS (Frames Per Second)) to create clearer face artefacts.
 
-The evaulator shall take at least three videos and select the best one to create each face artefact.
+The evaluator shall take at least three videos and select the best one to create each face artefact.
 
 == Variations
 === Variation 1 (2D Face 2-3)
-This variant uses Type 2 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper) to conduct high qulaity replay video attacks.
+This variant uses Type 2 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper) to conduct high quality replay video attacks.
 
 == Prerequisite
-The evaluator shall enrol test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
+The evaluator shall enroll test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
 
 == Presentation
 The evaluator shall present a mobile device screen by tripod for 10 seconds as described in <<2DFaceOverview>>.
 
 == Penetration Testing and Attack Potential Rating Suggestions
 === Penetration Testing Suggestion
-The evaluator shall consider to change the following factors for penetration testing.
+The evaluator shall consider changing the following factors for penetration testing.
 
 * Configuration of tool
 +
@@ -43,7 +43,7 @@ The evaluator can change, for example, color effect of camera to change quality 
 As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. 
 
 === Attack Potential Rating Suggestion
-The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to caluculate the attack potential. 
+The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to calculate the attack potential. 
 
 [cols=",,",options="header",]
 .Attack Potential
@@ -86,4 +86,4 @@ a|
 |=======================
 
 == Pass Criteria
-There is no additional criteira other than defined in <<BIOSD>> and <<ToolOverview>>.
+There are no additional criteria other than defined in <<BIOSD>> and <<ToolOverview>>.
