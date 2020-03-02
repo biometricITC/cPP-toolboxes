@@ -46,11 +46,15 @@ As described in <<BIOSD>>, the evaluator can change the distance between the art
 === Attack Potential Rating Suggestion
 The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to calculate the attack potential. 
 
-[cols=",,",options="header",]
+[cols="2,1,1",options="header",]
 .Attack Potential
 |=======================
-|Factor |Value |
-| |Identification |Exploitation
+|Factor 
+2+^|Value
+
+|
+|Identification 
+|Exploitation
 
 |*Elapsed Time*
 |<= one week (1) 

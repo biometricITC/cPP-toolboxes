@@ -1,53 +1,48 @@
 = 3D face image toolbox inventory
 
-This document specifies requirements for tools to create 3D face mask or head from 2D face image (Tool requirement for Printed Face mask attack is defined in <<2DFaceInventory>>). Requirements for each tool and examples of tool are specified in the following table.
+This document specifies requirements for tools used to create a 3D face mask or head from 2D face image (the tool requirements for the Printed Face mask attack are defined in <<2DFaceInventory>>). Requirements for each tool and examples of tool are specified in the following table.
 
-The evaluator may use any tools to create 3D face mask or head as long as they meet requirements specified below. The evaluator may use any available services (e.g. online 3D printing) to create 3D face mask or head in cost effective way.
+The evaluator may use any tools to create a 3D face mask or head as long as they meet requirements specified below. The evaluator may use any available services (e.g. online 3D printing) to create 3D face mask or head in cost effective way.
 
 The evaluator may need to use other tools that are not specified here. For example, the evaluator needs a PC to install and run reconstruction software. In such cases, the evaluator may use any PCs as long as the specification of PC meets the software’s hardware requirement.  
 
 .Tool requirement
-[cols="3*"]
+[cols=".^1,.^1,3"]
 |===
 
-| ID  | Category            | Description    
+|ID
+|Category
+|Description    
 
-| T.1 
-| dSLR camera    
-a|
+|T.1 
+|dSLR camera    
+a|This dSLR camera is used to capture 2D face images that are used to reconstruct a 3D face later by reconstruction software. So, the evaluator shall use such dSLR camera that can capture enough quality of 2D images that the reconstruction software requires.
 
-* This dSLR camera is used to capture 2D face images that are used to reconstruct a 3D face later by reconstruction software. So, the evaluator shall use such dSLR camera that can capture enough quality of 2D images that the reconstruction software requires.
+|T.2 
+|Reconstruction software             
+a|A few free or commercial software that are specialized for 3D face reconstruction are available. Examples of such software are listed below.
 
-| T.2 
-| Reconstruction software             
-a| 
+* https://facegen.com/[FaceGen]
+* https://cvl-demos.cs.nott.ac.uk/vrn/[Direct Volumetric CNN Regression tool]
 
-* A few free or commercial software that are specialized for 3D face reconstruction are available. Examples of such software are listed below.
-** https://facegen.com/[FaceGen]
-** https://cvl-demos.cs.nott.ac.uk/vrn/[Direct Volumetric CNN Regression tool]
+The evaluator shall search available software and select the one that can reconstruct best quality of 3D face.
 
-* The evaluator shall search available software and select the one that can reconstruct best quality of 3D face.
+|T.3 
+|3D modeling software             
+a|Any modeling software, including free software such as http://www.meshmixer.com/[Meshmixer] can be used to view and edit a 3D image.
 
-| T.3 
-| 3D modeling software             
-a| 
+|T.4 
+|Materials for 3D face mask or head            
+a|Material of mask of head would need to be stiff enough to hold features of test user’s face, but soft enough to trick a sensor into thinking it is skin. The evaluator shall select following materials to create 3D face mask or head:
 
-* Any modeling software, including free software such as http://www.meshmixer.com/[Meshmixer] can be used to view and edit a 3D image.
+* Rubbery, translucent silicone
+* opaque, soft vinyl
+* gelatin
+* stone-like plaster
+* thin, stiff, vacuum forming plastic
 
-| T.4 
-| Materials for 3D face mask or head            
-a| 
-
-* Material of mask of head would need to be stiff enough to hold features of test user’s face, but soft enough to trick a sensor into thinking it is skin. The evaluator shall select following materials to create 3D face mask or head
-** Rubbery, translucent silicone
-** opaque, soft vinyl
-** gelatin
-** stone-like plaster
-** thin, stiff, vacuum forming plastic.
-
-| T.5 
-| 3D Printer              
-a|
-* There are lots of online 3D printing services available. The evaluator shall select ones that can create 3D face mask or head from materials recommended in T.3
+|T.5 
+|3D Printer              
+a|There are lots of online 3D printing services available. The evaluator shall select ones that can create 3D face mask or head from materials recommended in T.3
  
 |===

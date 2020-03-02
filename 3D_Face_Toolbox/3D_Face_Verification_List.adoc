@@ -14,9 +14,9 @@ This shows the set of test items for 3D face image modalities.
 |link:3D_Face_Toolbox/attacks/3D-face_attack_1_1.adoc[Printed Face mask, Normal quality]
 
 |3D Face 2-1
-|link:3D_Face_Toolbox/attacks/2D-face_attack_1_1.adoc[Printed Face mask, High quality (Valication of 3D Face 1-1)]
+|link:3D_Face_Toolbox/attacks/3D-face_attack_1_1.adoc[Printed Face mask, High quality (Variation of 3D Face 1-1)]
 
 |2D Face 3
-|link:3D_Face_Toolbox/attacks/2D-face_attack_3.adoc[Attack using 3D face mask or head from 2D image]
+|link:3D_Face_Toolbox/attacks/3D-face_attack_3.adoc[Attack using 3D face mask or head from 2D image]
 
 |===
