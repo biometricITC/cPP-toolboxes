@@ -87,5 +87,5 @@ a|
 |=======================
 
 == Pass Criteria
-There is no additional criteira other than defined in <<BIOSD>> and <<ToolOverview>>.
+There are no additional criteria other than defined in <<BIOSD>> and <<ToolOverview>>.
 
