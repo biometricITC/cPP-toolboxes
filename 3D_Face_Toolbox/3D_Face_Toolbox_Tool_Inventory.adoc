@@ -43,6 +43,6 @@ a|Material of mask of head would need to be stiff enough to hold features of tes
 
 |T.5 
 |3D Printer              
-a|There are lots of online 3D printing services available. The evaluator shall select ones that can create 3D face mask or head from materials recommended in T.3
+a|There are lots of online 3D printing services available. The evaluator shall select ones that can create 3D face mask or head from materials recommended in T.4
  
 |===
