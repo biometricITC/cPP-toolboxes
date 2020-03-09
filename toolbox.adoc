@@ -25,6 +25,8 @@ Currently toolbox is developed for the following biometric modalities:
 * Fingerprint
 * Vein
 
+The toolbox is intended to be a state of the art set of test and is continually updated. The latest versions of the toolbox for each supported modality must be used by the evaluator at the time the testing begins.
+
 == Purpose of this toolbox overview
 
 This toolbox overview describes common instructions and components for all toolboxes, rather than repeating the same information in each toolbox. The evaluator shall refer both the toolbox overview and the relevant toolbox to perform independent and penetration testing. If there is conflict between the toolbox overview and a toolbox, the toolbox takes precedence over the overview.
