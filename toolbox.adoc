@@ -1,16 +1,16 @@
-= Toolbox Overview 
+= Biometric PAD Toolbox Overview [Toolbox]
 :showtitle:
 :toc:
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 0.5
-:revdate: 2019-12-06
+:revnumber: 0.6
+:revdate: March 13, 2020
 
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
 
-The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<SD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for PAD in detail.
+The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for PAD in detail.
 
 This overview is originally developed for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principles to evaluation activities for FIA_MBE_EXT.3.
 
@@ -24,6 +24,8 @@ Currently toolbox is developed for the following biometric modalities:
 ** 3D Image
 * Fingerprint
 * Vein
+
+The toolbox is intended to be a state of the art set of test and is continually updated. The latest versions of the toolbox for each supported modality must be used by the evaluator at the time the testing begins.
 
 == Purpose of this toolbox overview
 
@@ -40,7 +42,7 @@ _modality name_ Toolbox Inventory::
 This section categorizes tools and materials that the evaluator shall use to capture a image of biometric characteristics and produce artefacts.
 
 _modality name_ Verification List::
-This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<SD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing. 
+This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<BIOSD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing. 
 
 _modality name_ References::
 This section lists all publicly available information referred to create a toolbox.
@@ -73,19 +75,19 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Procedure to create artefacts
 
 |*Variations*
-|Variant of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different *Recipe* or with different *Tools* specified here for the independent testing.
+|Variants of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different *Recipe* or with different *Tools* specified here for the independent testing.
 
 |*Prerequisite*
 |Any conditions that should meet to perform each test
 
 |*Presentation*
-|Detail instruction to present artefact to the TOE
+|Instructions to present artefact to the TOE
 
 |*Penetration Testing and Attack Potential Rating Suggestions*
-|Suggestions that evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification 
+|Suggestions that the evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification 
 
 |*Pass Criteria*
-|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<SD>> Section 9.3 for penetration testing  
+|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<BIOSD>> Section 9.3 for penetration testing  
 
 |===
 
@@ -95,7 +97,7 @@ As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, includi
 For all types of testing, there are some common steps/procedures to be followed. These are detailed here.
 
 === General test protocol
-Presentation attack can be performed through the following three steps. 
+Presentation attacks can be performed through the following three steps. 
 
 ==== Preparation
 Before testing can start, the following pre-requisite needs to be met:
@@ -135,12 +137,12 @@ The results of the presentation of artefacts is defined as:
 |===
 
 == Guidance for Independent Testing (ATE_IND.1)
-For independent testing, this guidance is common for all toolboxes. More specific guidance to specific biometric modality is provided in each toolbox. 
+For independent testing, this guidance is common for all toolboxes. More specific guidance for a specific biometric modality is provided in each toolbox. 
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
 === General test protocol
-Presentation attack can be performed through the following two steps after performing Preparation in Section 5. 
+The presentation attack can be performed through the following two steps after performing Preparation in Section 5. 
 
 ==== Artefact production 
 The production of artefacts for each toolbox shall be performed as follows:
@@ -196,10 +198,10 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 |===
 
-The maximum number of attempts allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, independent test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
+The maximum number of attempts allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
 
 == Guidance for Penetration Testing (AVA_VAN.1)
-The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<SD>> Section 6, the evaluator shall select those artefacts that show higher imposter attack presentation match rate during independent testing or higher quality artefacts.
+The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<BIOSD>> Section 6, the evaluator shall select those artefacts that show higher imposter attack presentation match rate during independent testing or higher quality artefacts.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
@@ -211,23 +213,45 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent testing.
 
-* The evaluator may refine the production process of artefacts, as explained in <<SD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable information if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
+* The evaluator may refine the production process of artefacts, as explained in <<BIOSD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
 
-* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<SD>>, both independent and penetration testing shall be finished within one week.
+* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
 
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<SD>>, both independent and penetration testing shall be finished within one week.
+* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
 
 === Number of Subjects
-If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts has successful matches and increase the number of attempts. The evaluator may replace the test subject for penetration testing as described in <<SD>> Section 6.
+If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 6.
 
 === Pass/Fail Criteria
-As described in <<SD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform arbitrary number of attempts within this time period. If the evaluator can create artefacts that meet the criteria defined in <<SD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.
+As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts within this time period. If the evaluator can create artefacts that meet the criteria defined in <<BIOSD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 5, 2019, Version 0.91
-- [#SD]#[SD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 05, 2019, Version 0.5
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
 
+== Revision History
+
+[cols=".^1,.^2,3",options="header",]
+.Revision history
+|===
+|Version 
+|Date 
+|Description
+
+|0.3
+|May 30, 2019
+|Public Review Draft 1
+
+|0.5
+|December 20, 2019
+|Public Review Draft 2
+
+|0.6
+|March 13, 2020
+|Proposed Release
+
+|===
