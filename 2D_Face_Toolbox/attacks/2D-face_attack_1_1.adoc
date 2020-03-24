@@ -5,7 +5,7 @@
 Printed photo attack, Normal quality
 
 == Overview
-The evaluator caputures and prints target user's face on the paper and present it to the TOE.
+The evaluator captures and prints target user's face on the paper and present it to the TOE.
 
 == Input
 Target user's face
@@ -18,22 +18,22 @@ The evaluator shall capture a face image and print it on a paper.
 
 The evaluator shall refer publicly available information to change default setting of the camera (e.g. picture size) and printer (e.g. resolution) to create clearer face artefacts.
 
-The evaulator shall take at least three photos and select the best one to create each face artefact.
+The evaluator shall take at least three photos and select the best one to create each face artefact.
 
 == Variations
 
 === Variation 1 (2D Face 2-1)
-This variant uses Type 2 tools in <<2DFaceInventory>> except T.4 (Screen) to conduct high qulaity printed photo attacks.
+This variant uses Type 2 tools in <<2DFaceInventory>> except T.4 (Screen) to conduct high quality printed photo attacks.
 
 == Prerequisite
-The evaluator shall enrol test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
+The evaluator shall enroll test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
 
 == Presentation
 The evaluator shall present a printed photo by hand as described in <<2DFaceOverview>>.
 
 == Penetration Testing and Attack Potential Rating Suggestions
 === Penetration Testing Suggestion
-The evaluator shall consider to change the following factors for penetration testing.
+The evaluator shall consider changing the following factors for penetration testing.
 
 * Configuration of tool
 +
@@ -41,10 +41,10 @@ The evaluator can change, for example, color effect of camera to change quality 
 
 * Presentation method
 + 
-As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. In addtion to that, the evaluator can deliberately warps a printed photo, trying to simulate facial motion (Warped photo attack). The evaluator can also cut off the eye regions of a printed photo, hide behind and exhibit blinking through the holes (Cut photo attack).  
+As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. In addition to that, the evaluator can deliberately warp a printed photo, trying to simulate facial motion (Warped photo attack). The evaluator can also cut off the eye regions of a printed photo, hide behind and exhibit blinking through the holes (Cut photo attack).  
 
 === Attack Potential Rating Suggestion
-The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to caluculate the attack potential. 
+The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to calculate the attack potential. 
 
 [cols=",,",options="header",]
 .Attack Potential
@@ -87,5 +87,5 @@ a|
 |=======================
 
 == Pass Criteria
-There is no additional criteira other than defined in <<BIOSD>> and <<ToolOverview>>.
+There are no additional criteria other than defined in <<BIOSD>> and <<ToolOverview>>.
 

@@ -1,34 +1,35 @@
 == Number
-2D Face 1-3
+3D Face 1-1
 
-=== Attack type
-Replay video attack, Normal quality
+== Attack type
+Printed face mask attack, Normal quality
 
 == Overview
-The evaluator records and replays target user's face on a mobile device screen and present it to the TOE.
+The evaluator captures and prints target user's face on the paper and bend and wear a face mask and present it to the TOE.
 
 == Input
 Target user's face
 
 == Tools
-Type 1 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper)
+Type 1 tools in <<2DFaceInventory>> except T.4 (Screen)
 
 == Recipe
-The evaluator shall record a face image and replay it on a mobile device screen. 
+The evaluator shall capture a face image and print it on a paper. 
 
-The evaluator shall refer publicly available information to change default setting of the camera (e.g. FPS (Frames Per Second)) to create clearer face artefacts.
+The evaluator shall refer publicly available information to change default setting of the camera (e.g. picture size) and printer (e.g. resolution) to create clearer face artefacts.
 
-The evaluator shall take at least three videos and select the best one to create each face artefact.
+The evaluator shall take at least three photos and select the best one to create each face artefact.
 
 == Variations
-=== Variation 1 (2D Face 2-3)
-This variant uses Type 2 tools in <<2DFaceInventory>> except T.2 (Printer) and T.3 (Print paper) to conduct high quality replay video attacks.
+
+=== Variation 1 (2D Face 2-1)
+This variant uses Type 2 tools in <<2DFaceInventory>> except T.4 (Screen) to conduct high quality Printed face mask attacks.
 
 == Prerequisite
 The evaluator shall enroll test users first as described in <<2DFaceOverview>>. If the ST covers the multiple configurations for face unlock, the same test should be done for all configurations.
 
 == Presentation
-The evaluator shall present a mobile device screen by tripod for 10 seconds as described in <<2DFaceOverview>>.
+The evaluator shall wear a printed face mask using tape or paste as described in <<3DFaceOverview>>.
 
 == Penetration Testing and Attack Potential Rating Suggestions
 === Penetration Testing Suggestion
@@ -40,16 +41,20 @@ The evaluator can change, for example, color effect of camera to change quality 
 
 * Presentation method
 + 
-As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. 
+As described in <<BIOSD>>, the evaluator can change the distance between the artefact and the TOE. In addition to that, the evaluator can cut off the eye regions of a printed photo, hide behind and exhibit blinking through the holes (Cut photo attack).  
 
 === Attack Potential Rating Suggestion
 The attack potential that is required to build this artefact is summarized in the following table. See <<BIOSD>> Section 9 for more information about how to calculate the attack potential. 
 
-[cols=",,",options="header",]
+[cols="2,1,1",options="header",]
 .Attack Potential
 |=======================
-|Factor |Value |
-| |Identification |Exploitation
+|Factor 
+2+^|Value
+
+|
+|Identification 
+|Exploitation
 
 |*Elapsed Time*
 |<= one week (1) 

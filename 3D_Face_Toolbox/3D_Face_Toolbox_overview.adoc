@@ -1,0 +1,151 @@
+= 3D face image toolbox overview
+
+== Overview
+As described in <<2DFaceOverview>>, if the TOE implements 3D based face verification, the evaluator doesn’t need to create 2D face artefacts defined in <<2DFaceOverview>>, however, the evaluator shall create and test 3D face artefacts defined in this toolbox that try to mimic three-dimensional geometry of a real face. If the TOE doesn’t implement 3D based face verification or the evaluator can’t confirm about it, the evaluator shall create and test both 2D and 3D artefacts defined in <<2DFaceOverview>> and this toolbox.
+
+== Face presentation attack
+
+There are three categories of 3D face artefacts or masks studied in existing research papers. Some papers report successful presentation attacks using target user’s face with some artefacts (e.g. putting special glasses above the sleeping target user’s face to bypass the attention detection mechanism) however, this toolbox doesn’t consider such attack scenarios because attack potential required to exploit these scenarios is clearly beyond the Basic attack potential.
+
+- Printed Face mask
++
+Printed photo is bent and worn as a face mask to create the illusion of 3D in a real face.
+
+- 3D face mask or head from 2D face image
++
+Predict the 3D features of the face from 2D images and create a 3D face mask or head from the predicted 3D face image.
+
+- 3D face mask or head from 3D face image
++
+Get a 3D face image through a 3D scan of the face or using molding material and create a 3D face mask or head from the actual 3D image of a target user’s face.
+
+The last category, 3D face mask or head from 3D face image, is out of scope of this toolbox because it’s beyond the Basic attack potential. As described in <<BIOSD>>, the attack potential shall be rated as follows.
+
+-	*Elapsed time* for *Identification*
++
+*⇐ one week* (1)
+
+-	*Window of Opportunity (Access to TOE)* for *Exploitation*
++
+*Moderate* (4)
+
+In addition to them, following factors for creating a 3D face mask or head from 3D face image should be rated as follows.
+
+-	*Window of Opportunity (Access to Biometric Characteristics)*
++
+*Moderate* (4), because 3D scan of the face or using molding material requires direct contact with a target user
+
+-	*Expertise* for *Identification*
++
+*Proficient* (2), because using a 3D scanner and 3D printer or using molding material and resin for creating sufficient quality of 3D face mask or head requires some level of knowledge and experiences that the Layman doesn’t has.
+
+In total, the attack potential for 3D face mask or head from 3D face image is at least 11, that is beyond the Basic attack potential (10). This is the reason why this toolbox excludes this type of artefacts. However, both Printed Face mask and 3D face mask or head 
+from 2D face image is within the scope of the Basic attack potential because only 2D images of target face is required to create 
+both face artefacts, so *Window of Opportunity (Access to Biometric Characteristics)* should be rated as *Immediate* (0).
+
+3D face presentation attack can be conducted through the following process using 3D face mask or head described above.
+
+. Capture face images of a target user using a camera
+
+*Printed Face mask*
+
+[start=2]
+. Print captured image on a paper
+
+. Wear a face mask and present it to the TOE
+
+*3D face mask or head from 2D face image*
+
+[start=2]
+. Reconstruct the 3D face from 2D face images and create a 3D face mask or head
+
+. Wear a face mask and present it to the TOE or present the 3D head to the TOE
+
+== Face presentation attack detection
+The 3D face mask or head contains the quality defect that results in the appearance difference from a genuine face. For example, the skin texture and detailed facial structures in the mask or head have perceivable differences compared to those in real faces. The 3D face mask or head also lacks the facial motion such as facial expression changes, eye blinks and mouth movements because it is made of hard materials. Several PAD methods that utilize such cues have been studied and reported by researchers. Other PAD methods utilize liveness cues such as thermal signatures, gaze information, pulse or heartbeat signals to detect a 3D face mask or head. However, normally such design information of the PAD is not available to the evaluator and the TOE must be tested in black box manner.
+
+== Common test protocol
+Test protocol is quite similar as one defined in <<2DFaceOverview>>. This section only shows the differences between the two.
+
+=== Presentation attack with Printed Face mask
+This attack is based on the printed photo attack except the evaluator shall bend and wear the printed paper as a face mask instead of presenting it to the TOE by hand. So, the method of presentation is the only difference.
+
+[start=4]
+. Artefact presentation
++
+.. The evaluator shall bend and wear the Printed Face mask using tape or paste and present it to the TOE under the same controlled environment.
++
+.. The evaluator shall present a Printed Face mask in a way to minimize the reflection from ambient lighting.
+
+=== Presentation attack with 3D face mask or head from 2D face image
+For this attack, the method of creation and presentation are different from ones in <<2DFaceOverview>>. This section explains about production methods of 3D face mask or head. 
+
+[start=3]
+. Artefact creation
++
+.. The evaluator shall reconstruct a 3D face from captured 2D face image(s). 
++
+.. The evaluator shall create a 3D face mask or head from the 3D image. Size of face mask or head shall be same as the test user’s face.
++
+.. The evaluator shall use those tools that meet requirements defined in <<3DFaceInventory>> to create a 3D face mask or head.
+
+. Artefact presentation
++
+.. The evaluator shall wear the 3D face mask and present it to the TOE or present the 3D head to the TOE under the same controlled environment.
++
+.. The evaluator shall present the 3D face mask or head in a way to minimize the reflection from ambient lighting.
+
+=== Guidance for production methods of a 3D face mask or head from 2D face image
+
+The 3D facial geometry can be recovered from one or more 2D face images by a 3D face reconstruction method. There are several reconstruction methods such as 3D Morphable Model and Shape-from-shading, however, the evaluator doesn’t need to examine and select the best one with minimum reprojection error because such tasks require higher attack potential than one the TOE must resist. Instead, the evaluator shall select the easiest and feasible way to create the 3D face mask or head in limited time period at affordable cost. 
+
+There are two ways to create a 3D face mask or head.
+
+-	Use reconstruction software and 3D printer
++
+The evaluator may use software to reconstruct a 3D face from one or more photos and generate a 3D file for creating 3D mask or head by a 3D printer.
+
+-	Outsource it from a third party
++
+Instead of making a 3D head directly, the evaluator can order a company to make a 3D mask or head from one or more photos.
+
+The evaluator shall prepare three test subjects and produce three artefacts from each test subject for the independent testing and use the same artefacts with increasing number of attempts or create additional new artefacts for the penetration testing, as described in <<ToolOverview>>. There may be many 3D face mask or head production methods at the time of testing. The evaluator shall follow the guideline below to create 3D face masks or heads.
+
+-	Timeframe and cost
++
+The evaluator shall follow the recommended test period (i.e. one week) to conduct the PAD independent and penetration testing.
+
+-	3D face mask or head production methods 
++
+The evaluator should consider covering variety of production methods of 3D face mask or head as much as possible. For example, the evaluator may outsource the 3D face mask or head for one test subject from a third party and create masks or heads for the other two subjects by her/himself with reconstruction software and 3D printer. 
+
+-	Number of photos
++
+The evaluator shall only use no more than three photos (i.e. frontal, right and left profile image) to reconstruct a 3D face. 
+
+== Requirements for tools
+The requirements for tools for the Printed Face mask are same as ones defined for printed photo attack in <<2DFaceInventory>>. The evaluator shall create normal and high quality printed photos.
+
+Minimum requirements for tools such as materials for 3D mask or head are defined in <<3DFaceInventory>>. If the evaluator outsources it from a third party, the evaluator shall follow instructions from the third party when capturing photos (e.g. lighting condition) and provide only three photos at maximum to them.
+
+== Test items
+The evaluator shall create artefacts defined in all test items listed in <<3DFaceList>>. <<ToolOverview>> defines required number of attempts for the independent testing and maximum timeframe for both independent and penetration testing.
+
+== Pass/fail criteria
+If Pass/fail criteria is defined in the test items the evaluator shall follow them, otherwise follow criteria defined in <<BIOSD>> and <<ToolOverview>>.
+
+== Useful information 
+3D Face Image Toolbox was created based on research papers listed in <<3DFaceREF>>. The evaluator should read them before conducting the PAD testing because they include more detailed information about PAD test methods.
+
+=== Related Documents
+[bibliography]
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, December 20, 2019, Version 0.92 - [BIOSD].
+- [#ToolOverview]#[ToolOverview]# Toolbox Overview, TBD.
+- [#2DFaceOverview]#[2DFaceOverview]# 2D Face Image Toolbox Overview, TBD.
+- [#2DFaceInventory]#[2DFaceInventory]# 2D Face Image Toolbox Inventory, TBD.
+- [#2DFaceList]#[2DFaceList]# 2D Face Image Verification List, TBD.
+- [#2DFaceREF]#[2DFaceREF]# 2D Face Image References, TBD.
+- [#3DFaceOverview]#[3DFaceOverview]# This document
+- [#3DFaceInventory]#[3DFaceInventory]# 3D Face Image Toolbox Inventory, TBD.
+- [#3DFaceList]#[3DFaceList]# 3D Face Image Verification List, TBD.
+- [#3DFaceREF]#[3DFaceREF]# 3D Face Image References, TBD.
