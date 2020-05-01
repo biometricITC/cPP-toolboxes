@@ -10,7 +10,7 @@
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
 
-The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for PAD in detail.
+The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail.
 
 This overview is originally developed for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principles to evaluation activities for FIA_MBE_EXT.3.
 
@@ -92,7 +92,7 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |===
 
 == Common guidance for Independent & Vulnerability Testing
-As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enrolled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
+As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enroled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
 
 For all types of testing, there are some common steps/procedures to be followed. These are detailed here.
 
@@ -102,7 +102,7 @@ Presentation attacks can be performed through the following three steps.
 ==== Preparation
 Before testing can start, the following pre-requisite needs to be met:
 
-* It has to be ensured that the test subject whose body part is used to produce the artefacts for testing is enrolled into the TOE correctly as follows.
+* It has to be ensured that the test subject whose body part is used to produce the artefacts for testing is enroled into the TOE correctly as follows.
 
 ** Enrolment shall be done following guidance provided by the TOE.
 
@@ -117,7 +117,7 @@ Artefact production needs to follow these requirements:
 
 * The evaluator shall document any necessary information so that artefacts used for the test can be re-produced by the evaluator.
 
-* Each produced artefact shall be identified by a unique identifier. This identifier shall be be attached to the artefact at all times (as far as this is possible without destroying the artefact).
+* Each produced artefact shall be identified by a unique identifier. This identifier shall be attached to the artefact at all times (as far as this is possible without destroying the artefact).
 
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
@@ -129,7 +129,7 @@ The results of the presentation of artefacts is defined as:
 |Definition
 
 |Successful (Match) Attack
-|The TOE matches the artefact to the enrolled user
+|The TOE matches the artefact to the enroled user
 
 |Failed Attack
 |The TOE rejects the artefact
