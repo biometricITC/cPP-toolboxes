@@ -4,8 +4,8 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 0.6
-:revdate: March 13, 2020
+:revnumber: 1.0
+:revdate: May 11, 2020
 
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
@@ -230,8 +230,8 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
 
 == Revision History
 
@@ -253,5 +253,9 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 |0.6
 |March 13, 2020
 |Proposed Release
+
+|1.0
+|May 11, 2020
+|Public Release
 
 |===
