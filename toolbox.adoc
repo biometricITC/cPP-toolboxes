@@ -6,6 +6,7 @@
 :icons: font
 :revnumber: 0.6
 :revdate: March 13, 2020
+:doctype: book
 
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
