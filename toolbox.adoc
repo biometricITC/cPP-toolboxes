@@ -4,12 +4,12 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 0.6
-:revdate: March 13, 2020
+:revnumber: 1.0
+:revdate: May 11, 2020
 :doctype: book
 
 == Introduction
-The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE. 
+The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE.
 
 The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail.
 
@@ -43,7 +43,7 @@ _modality name_ Toolbox Inventory::
 This section categorizes tools and materials that the evaluator shall use to capture a image of biometric characteristics and produce artefacts.
 
 _modality name_ Verification List::
-This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<BIOSD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing. 
+This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<BIOSD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing.
 
 _modality name_ References::
 This section lists all publicly available information referred to create a toolbox.
@@ -54,7 +54,7 @@ Each test item includes the following sub-sections. This toolbox overview provid
 [cols=".^1,2",options="header"]
 |===
 
-|Sub-section name 
+|Sub-section name
 |Description
 
 |*Number*
@@ -85,10 +85,10 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Instructions to present artefact to the TOE
 
 |*Penetration Testing and Attack Potential Rating Suggestions*
-|Suggestions that the evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification 
+|Suggestions that the evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification
 
 |*Pass Criteria*
-|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<BIOSD>> Section 9.3 for penetration testing  
+|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<BIOSD>> Section 9.3 for penetration testing
 
 |===
 
@@ -98,7 +98,7 @@ As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, includi
 For all types of testing, there are some common steps/procedures to be followed. These are detailed here.
 
 === General test protocol
-Presentation attacks can be performed through the following three steps. 
+Presentation attacks can be performed through the following three steps.
 
 ==== Preparation
 Before testing can start, the following pre-requisite needs to be met:
@@ -111,7 +111,7 @@ Before testing can start, the following pre-requisite needs to be met:
 
 ** In case of repeated failures during the test enrolment, the test subject shall use a different body part (this could mean to use a different finger of the test subject in case of fingerprint verification) and start test enrolment transactions again.
 
-** If the test subject cannot enrol any body parts during the test enrolment, the test subject shall be exempt from further testing. 
+** If the test subject cannot enrol any body parts during the test enrolment, the test subject shall be exempt from further testing.
 
 ==== Artefact production
 Artefact production needs to follow these requirements:
@@ -126,7 +126,7 @@ The results of the presentation of artefacts is defined as:
 [cols=".^1,2",options="header"]
 |===
 
-|Result 
+|Result
 |Definition
 
 |Successful (Match) Attack
@@ -138,14 +138,14 @@ The results of the presentation of artefacts is defined as:
 |===
 
 == Guidance for Independent Testing (ATE_IND.1)
-For independent testing, this guidance is common for all toolboxes. More specific guidance for a specific biometric modality is provided in each toolbox. 
+For independent testing, this guidance is common for all toolboxes. More specific guidance for a specific biometric modality is provided in each toolbox.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
 === General test protocol
-The presentation attack can be performed through the following two steps after performing Preparation in Section 5. 
+The presentation attack can be performed through the following two steps after performing Preparation in Section 5.
 
-==== Artefact production 
+==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator shall produce all artefacts defined in the toolbox.
@@ -163,9 +163,9 @@ The evaluator shall present artefacts to the TOE to perform presentation attacks
 The evaluator shall prepare three test subjects for the above test. A test subject is defined as one individual, and not different body parts from one person (i.e. three fingers from one person could not be considered to be three test subjects for the creation of artefacts).
 
 === Pass/Fail Criteria
-The following pass criteria shall be applied if no other criteria are defined in the toolbox. 
+The following pass criteria shall be applied if no other criteria are defined in the toolbox.
 
-A TOE passes the test if and only if it reliably defeats the use of *all artefacts (i.e. 3 X 3 = 9 artefacts in total)* that have to be built according to the toolbox. This means that none of the artefacts must be able to reproducibly overcome the TOE. 
+A TOE passes the test if and only if it reliably defeats the use of *all artefacts (i.e. 3 X 3 = 9 artefacts in total)* that have to be built according to the toolbox. This means that none of the artefacts must be able to reproducibly overcome the TOE.
 
 To reproducibly overcome the TOE by the use of a *certain artefact* in the outlined test scenario is defined as follows:
 
@@ -175,7 +175,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 |Attempts
 |Number of matches
-|Outcome  
+|Outcome
 
 |10
 |0
@@ -207,9 +207,9 @@ The evaluator moves to penetration testing only if the TOE passes independent te
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
 === General test protocol
-Presentation attack can be performed through the following two steps after performing Preparation in Section 5. 
+Presentation attack can be performed through the following two steps after performing Preparation in Section 5.
 
-==== Artefact production 
+==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent testing.
@@ -231,16 +231,16 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, March 13, 2020, Version 0.95
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
 
 == Revision History
 
 [cols=".^1,.^2,3",options="header",]
 .Revision history
 |===
-|Version 
-|Date 
+|Version
+|Date
 |Description
 
 |0.3
@@ -254,5 +254,9 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 |0.6
 |March 13, 2020
 |Proposed Release
+
+|1.0
+|May 11, 2020
+|Public Release
 
 |===
