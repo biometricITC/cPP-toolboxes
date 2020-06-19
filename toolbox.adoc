@@ -75,7 +75,6 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |*Recipe*
 |Procedure to create artefacts
 
-|*Variations*
 |Variants of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different procedure (e.g. different *Recipe* or with different *Attack Tools/Media* specified here) for the independent testing.
 
 |*Prerequisite*
