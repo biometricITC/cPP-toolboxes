@@ -69,14 +69,14 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |*Input*
 |Required input to produce artefacts
 
-|*Tools*
-|Required tools to capture a image of biometric characteristics and produce artefacts
+|*Attack Tools/Media*
+|Required tools and media to capture an image of biometric characteristics and produce artefacts
 
 |*Recipe*
 |Procedure to create artefacts
 
 |*Variations*
-|Variants of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different *Recipe* or with different *Tools* specified here for the independent testing.
+|Variants of artefacts to be generated based on this test item. The evaluator shall create those variants by slightly different procedure (e.g. different *Recipe* or with different *Attack Tools/Media* specified here) for the independent testing.
 
 |*Prerequisite*
 |Any conditions that should meet to perform each test
