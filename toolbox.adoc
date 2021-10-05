@@ -200,7 +200,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 As explained in <<BIOPP-Module>>, presentation attacks can be done by attempts or transactions.
 
-The maximum number of attempts/transactions allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts/transactions are not necessary even if 20 total attempts/transactions have not yet been made) because IAPAR exceeds 15% that is allowable maximum value specified in FIA_MBV_EXT.3.1..
+The maximum number of attempts/transactions allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts/transactions are not necessary even if 20 total attempts/transactions have not yet been made) because the IAPAR has exceeded 15%, the allowable maximum value specified in FIA_MBV_EXT.3.1.
 
 == Guidance for Penetration Testing (AVA_VAN.1)
 The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<BIOSD>> Section 7, the evaluator shall select those artefacts that show higher IAPAR during independent testing or higher quality artefacts.
