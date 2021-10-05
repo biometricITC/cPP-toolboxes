@@ -228,7 +228,7 @@ The evaluator shall present artefacts to the TOE to perform presentation attacks
 If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts/transactions. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 7.
 
 === Pass/Fail Criteria
-As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that can reproducibly overcome the TOE at the higher IAPAR specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
+As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
 == Related Documents
 
