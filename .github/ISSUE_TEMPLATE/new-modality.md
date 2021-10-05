@@ -9,6 +9,8 @@ assignees: n-kai, woodbe
 
 **Be aware that adding a new modality will take at least 6 months to complete.**
 
+For more information about the overall timeline and process, see https://github.com/biometricITC/Administration/blob/master/Toolbox_Updates.adoc.
+
 **Requesting Organization:**
 Provide contact information regarding the request.
 
