@@ -4,8 +4,8 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 1.0.1
-:revdate: July 30, 2020
+:revnumber: 1.1
+:revdate: November 9, 2021
 :doctype: book
 :xrefstyle: full
 
@@ -232,8 +232,8 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
 
 == Revision History
 
@@ -259,5 +259,9 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 |1.0
 |May 11, 2020
 |Public Release
+
+|1.1
+|November 9, 2021
+|Update based on changes to the PP-Module v1.1
 
 |===
