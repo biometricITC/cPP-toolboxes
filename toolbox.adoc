@@ -4,14 +4,15 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 1.0.1
-:revdate: July 30, 2020
+:revnumber: 1.1
+:revdate: November 9, 2021
 :doctype: book
+:xrefstyle: full
 
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE.
 
-The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 6 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail.
+The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 7 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail.
 
 This overview is originally developed for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principles to evaluation activities for FIA_MBE_EXT.3.
 
@@ -40,16 +41,16 @@ _modality name_ Toolbox overview::
 This section provides specific information only applicable to relevant biometric modality.
 
 _modality name_ Toolbox Inventory::
-This section categorizes tools and materials that the evaluator shall use to capture a image of biometric characteristics and produce artefacts.
+This section categorizes tools and materials that the evaluator shall use to capture an image of biometric characteristics and produce artefacts.
 
 _modality name_ Verification List::
-This section summarizes all test items that the evaluator shall peform during independent testing. As explained in <<BIOSD>> Section 6, the evaluator shall select specific test items for penetration testing based on the result of independent testing.
+This section summarizes all test items that the evaluator shall perform during independent testing. As explained in <<BIOSD>> Section 7, the evaluator shall select specific test items for penetration testing based on the result of independent testing.
 
 _modality name_ References::
 This section lists all publicly available information referred to create a toolbox.
 
 Test items::
-Each test item includes the following sub-sections. This toolbox overview provide a general test protocol in common for all toolboxes and these test items describe more detailed information to enable repeatable testing.
+Each test item includes the following sub-sections. This toolbox overview provides a general test protocol in common for all toolboxes and these test items describe more detailed information to enable repeatable testing.
 +
 [cols=".^1,2",options="header"]
 |===
@@ -88,12 +89,12 @@ Each test item includes the following sub-sections. This toolbox overview provid
 |Suggestions that the evaluator should consider devising penetration tests from this test item and calculate the attack potential rating. The evaluator may change the rating considering actual expertise or knowledge of TOE used to succeed attacks, however, the evaluator shall report such changes with proper justification
 
 |*Pass Criteria*
-|If this Pass criteria is defined in test items, evaluator shall follow it. Otherwise, the evaluator shall follow criteria defined in this toolbox overview for independent testing and one defined in <<BIOSD>> Section 9.3 for penetration testing
+|Additional information for pass-fail criteria of the test (IAPAR shall not exceed the value assigned in FIA_MBV_EXT.3.1 in any case)
 
 |===
 
 == Common guidance for Independent & Vulnerability Testing
-As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enroled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce a attack presentation match (i.e. a successful presentation attack).
+As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enroled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce an attack presentation match (i.e. a successful presentation attack).
 
 For all types of testing, there are some common steps/procedures to be followed. These are detailed here.
 
@@ -143,7 +144,7 @@ For independent testing, this guidance is common for all toolboxes. More specifi
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
 === General test protocol
-The presentation attack can be performed through the following two steps after performing Preparation in Section 5.
+The presentation attack can be performed through the following two steps after performing <<Preparation>>.
 
 ==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
@@ -163,8 +164,6 @@ The evaluator shall present artefacts to the TOE to perform presentation attacks
 The evaluator shall prepare three test subjects for the above test. A test subject is defined as one individual, and not different body parts from one person (i.e. three fingers from one person could not be considered to be three test subjects for the creation of artefacts).
 
 === Pass/Fail Criteria
-The following pass criteria shall be applied if no other criteria are defined in the toolbox.
-
 A TOE passes the test if and only if it reliably defeats the use of *all artefacts (i.e. 3 X 3 = 9 artefacts in total)* that have to be built according to the toolbox. This means that none of the artefacts must be able to reproducibly overcome the TOE.
 
 To reproducibly overcome the TOE by the use of a *certain artefact* in the outlined test scenario is defined as follows:
@@ -173,7 +172,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 [cols="1,1,3",options="header"]
 |===
 
-|Attempts
+|Attempts/Transactions
 |Number of matches
 |Outcome
 
@@ -187,7 +186,7 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 |10
 |2
-|Additional ten (10) attempts shall be made
+|Additional ten (10) attempts/transactions shall be made
 
 |20
 |2
@@ -199,22 +198,24 @@ To reproducibly overcome the TOE by the use of a *certain artefact* in the outli
 
 |===
 
-The maximum number of attempts allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts are not necessary even if 20 total attempts have not yet been made).
+As explained in <<BIOPP-Module>>, presentation attacks can be done by attempts or transactions.
+
+The maximum number of attempts/transactions allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts/transactions are not necessary even if 20 total attempts/transactions have not yet been made) because the IAPAR has exceeded 15%, the allowable maximum value specified in FIA_MBV_EXT.3.1.
 
 == Guidance for Penetration Testing (AVA_VAN.1)
-The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<BIOSD>> Section 6, the evaluator shall select those artefacts that show higher imposter attack presentation match rate during independent testing or higher quality artefacts.
+The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<BIOSD>> Section 7, the evaluator shall select those artefacts that show a higher IAPAR during independent testing or higher quality artefacts.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
 === General test protocol
-Presentation attack can be performed through the following two steps after performing Preparation in Section 5.
+Presentation attack can be performed through the following two steps after performing <<Preparation>>.
 
 ==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent testing.
 
-* The evaluator may refine the production process of artefacts, as explained in <<BIOSD>> Section 6. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
+* The evaluator may refine the production process of artefacts, as explained in <<BIOSD>> Section 7. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
 
 * The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
 
@@ -224,15 +225,15 @@ The evaluator shall present artefacts to the TOE to perform presentation attacks
 * Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
 
 === Number of Subjects
-If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 6.
+If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts/transactions. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 7.
 
 === Pass/Fail Criteria
-As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts within this time period. If the evaluator can create artefacts that meet the criteria defined in <<BIOSD>> Section 9.3, the TOE fails AVA_VAN.1 evaluation.
+As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, May 11, 2020, Version 1.0
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
 
 == Revision History
 
@@ -258,5 +259,9 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 |1.0
 |May 11, 2020
 |Public Release
+
+|1.1
+|November 9, 2021
+|Update based on changes to the PP-Module v1.1
 
 |===
