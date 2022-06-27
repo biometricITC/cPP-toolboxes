@@ -230,6 +230,20 @@ If the evaluator can create artefacts that produce an attack presentation match 
 === Pass/Fail Criteria
 As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
+== Guidance on Test Report
+As the testing described in the individual toolboxes encompasses the creation and presentation of a large number of artefacts, the report should provide sufficient information to ensure how the artefacts were created, presented and as applicable, stored (or retrieved from storage). 
+
+Broadly, pictures or video (visual) evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefacts and usage would be recorded as expected. 
+
+The following categories should have some sort of visual evidence:
+
+* Creation of an artefact type
+* Use of an artefact type
+* If applicable, storage of an artefact type after use
+* If applicable, retrieval of an artefact type from storage for use
+
+From a planning standpoint, the easiest way to handle this would be to visually record one artefact from retrieval/production to disposal/storage (depending on the type).
+
 == Related Documents
 
 - [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
