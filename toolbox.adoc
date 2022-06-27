@@ -149,7 +149,7 @@ The presentation attack can be performed through the following two steps after p
 ==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
-* The evaluator shall produce all artefacts defined in the toolbox.
+* The evaluator shall produce artefacts according to the Verification List defined in the toolbox based on the sensor type. If the sensor type does not match one explicitly listed, then all artefacts must be created (as defined by the Other type).
 
 * The evaluator shall follow instructions in the toolbox to produce artefacts, especially the evaluator shall use tools or materials (e.g. camera, display or printer) that meet requirements in toolbox.
 
