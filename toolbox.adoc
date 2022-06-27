@@ -121,6 +121,13 @@ Artefact production needs to follow these requirements:
 
 * Each produced artefact shall be identified by a unique identifier. This identifier shall be attached to the artefact at all times (as far as this is possible without destroying the artefact).
 
+===== Artefact storage
+Some types of artefacts may be able to be reused for later evaluations if properly stored according to the manufacturer's recommendations and remain free of visible defects. Some of these may be obvious, like the proper storage of photographs, but others may be more detailed, requiring temperature and humidity controls. Artefacts that are capable of being stored, information about what is done to store the artefacts (supported by visual evidence and documentation) along with guidance from the manufacturer that supports the methods implemented.
+
+For artefacts where long term storage and re-use is more subjective (such as the wrapped photograph in the Face Toolbox), information about how it was determined whether the artefact was in acceptable condition must be provided (for example no creases or cracks were visible).
+
+If stored artefacts are used in later evaluations, the method of storage must be included with the new evaluation to show proper procedures were followed for handling the artefacts.
+
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
 
