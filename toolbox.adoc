@@ -246,18 +246,18 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator may refine the production process of artefacts, as explained in <<BIOSD>> Section 7. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
 
-* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
+* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
+* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
 === Number of Subjects
 If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts/transactions. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 7.
 
 === Pass/Fail Criteria
-As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
+As described in <<BIOSD>>, penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
 == Related Documents
 
