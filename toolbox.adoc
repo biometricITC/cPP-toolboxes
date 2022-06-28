@@ -123,18 +123,18 @@ Artefact production needs to follow these requirements:
 
 As the testing described in the individual toolboxes encompasses the creation and presentation of a large number of artefacts, the test report shall provide sufficient information to ensure how the artefacts were created, presented and as applicable, stored (or retrieved from storage).
 
-If the scheme provides a guidance on the level of detail of the report, the evaluator must follow such guidance. However, if there is no guidance available from the scheme, the BIO-iTC recommends the inclusion of visual (pictures and/or video) evidence in the test report.
+If the scheme provides a guidance on the level of detail of the report, the evaluator must follow such guidance. However, if there is no guidance available from the scheme, the BIO-iTC recommends the inclusion of visual (pictures and/or video) evidence in the test report. If sound is included as part of the biometric system, then audio evidence should also be included with the visual evidence.
 
-Broadly, visual evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefacts and usage would be recorded as expected (but not captured visually). 
+Broadly, visual/audio evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefacts and usage would be recorded as expected (but not captured with visual or audio recordings). 
 
-If visual evidence is being provided, the following categories should have visual evidence:
+If visual/audio evidence is being provided, the following categories should have visual/audio evidence:
 
 * Creation of an artefact type
 * Use of an artefact type
 * If applicable, storage of an artefact type after use
 * If applicable, retrieval of an artefact type from storage for use
 
-From a planning standpoint, the easiest way to handle this would be to visually record one artefact from retrieval/production to disposal/storage (depending on the type).
+From a planning standpoint, the easiest way to handle this would be to record one artefact from retrieval/production to disposal/storage (depending on the type).
 
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
