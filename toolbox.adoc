@@ -128,6 +128,8 @@ For artefacts where long term storage and re-use is more subjective (such as the
 
 If stored artefacts are used in later evaluations, the method of storage must be included with the new evaluation to show proper procedures were followed for handling the artefacts.
 
+Before use, any stored artefacts must be checked for visible changes between the artefact and the subject to determine if the artefact is still acceptable for use. For example, a fingerprint artefact where the subject may have cut on their finger at the time of testing would lead to an artefact not being a sufficient match. 
+
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
 
