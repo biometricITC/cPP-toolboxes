@@ -125,14 +125,16 @@ As the testing described in the individual toolboxes encompasses the creation an
 
 If the scheme provides a guidance on the level of detail of the report, the evaluator must follow such guidance. However, if there is no guidance available from the scheme, the BIO-iTC recommends the inclusion of visual (pictures and/or video) evidence in the test report. If sound is included as part of the biometric system, then audio evidence should also be included with the visual evidence.
 
-Broadly, visual/audio evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefacts and usage would be recorded as expected (but not captured with visual or audio recordings). 
+Broadly, visual/audio evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefact production and usage would be recorded as expected (but not captured with visual or audio recordings). The evidence collected does not need to be continuous (for example a full video recording of every step), but must record significant steps in the creation of the artefact. 
 
 If visual/audio evidence is being provided, the following categories should have visual/audio evidence:
 
-* Creation of an artefact type
-* Use of an artefact type
+* Creation of an artefact type (significant steps)
+* Use of an artefact type (preparation that may be needed, usage)
 * If applicable, storage of an artefact type after use
+** How the artefact will be stored for later use
 * If applicable, retrieval of an artefact type from storage for use
+** How is the artefact prepared for use after removed from storage
 
 From a planning standpoint, the easiest way to handle this would be to record one artefact from retrieval/production to disposal/storage (depending on the type).
 
