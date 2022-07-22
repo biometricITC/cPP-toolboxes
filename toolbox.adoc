@@ -176,6 +176,13 @@ If stored artefacts are used in later evaluations, the method of storage must be
 
 Before use, any stored artefacts must be checked for visible changes between the artefact and the subject to determine if the artefact is still acceptable for use. For example, a fingerprint artefact where the subject may have cut on their finger at the time of testing would lead to an artefact not being of sufficient quality. 
 
+===== Use of stored artefacts
+As artefacts may degrade over time in ways that are not visible to the human eye but which may impact PAD performance, a PAD test must not rely solely on stored artefacts. To ensure that artefacts are not failing solely due to some sort of unseen degradation, if stored artefacts are to be used, a PAD test sequence must utilize a combination of both stored and freshly created artefacts.
+
+The purpose of this mix is to provide a check that the stored artefacts by copmparing the performance of the stored artefacts to the new ones. Stored artefacts that seem to perform significantly lower then they should be discarded and fresh artefacts created to replace them. The test report must denote which artefacts were stored vs fresh.
+
+As different modalities have different types of artefacts, the modality overview documents specify the requirements for artefact reuse in terms of the maximum percentage of stored artefacts of a type which can be used in testing.
+
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
 
