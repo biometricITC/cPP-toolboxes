@@ -172,7 +172,7 @@ It is widely known that, for any biometric modality, some degree of variation in
 
 The evaluator may reuse artefacts for later evaluations, however, the evaluator shall check that the following conditions are met to reuse the stored artefacts:
 
-* Time difference between enrolment and artefacts creation should be within one month (defined here as no more than 5 weeks from the date of creation of the artefact). If the evaluator uses aretefacts older (or for longer) than one month, the evalutor shall follow the guidance in <<_Use of stored artefacts, Use of stored artefacts>> for proper storage and retrieval of the artefacts. However, the evaluator shall not use artefacts older three months after its creation in any case.
+* Time difference between enrolment and artefact creation and usage should be as minimal as possible, though individual biometric modalities may have different time periods for which reuse is acceptable. If the evaluator uses artefacts older (or for longer) than one month (here defined as a five week period from enrolment and creation), the evalutor shall follow the guidance in <<Use of stored artefacts, Use of stored artefacts>> for proper storage and retrieval of the artefacts.
 * Artefacts should be properly stored according to the manufacturer's recommendations and remain free of visible defects. Some of these may be obvious, like the proper storage of photographs, but others may be more detailed, requiring temperature and humidity controls. For artefacts that are capable of being stored, information about what is done to store the artefacts (supported by visual evidence and documentation) along with guidance from the manufacturer that supports the methods implemented.
 
 ===== Use of stored artefacts 
