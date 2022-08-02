@@ -5,7 +5,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 1.1
-:revdate: November 9, 2021
+:revdate: July 19, 2022
 :doctype: book
 :xrefstyle: full
 
@@ -299,8 +299,8 @@ As described in <<BIOSD>>, penetration testing shall be finished within one week
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, July 19, 2022, Version 1.1
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, July 19, 2022, Version 1.1
 
 == Revision History
 
@@ -328,7 +328,7 @@ As described in <<BIOSD>>, penetration testing shall be finished within one week
 |Public Release
 
 |1.1
-|November 9, 2021
+|July 19, 2022
 |Update based on changes to the PP-Module v1.1
 
 |===
