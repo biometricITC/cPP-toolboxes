@@ -5,14 +5,14 @@
 :imagesdir: images
 :icons: font
 :revnumber: 1.1
-:revdate: November 9, 2021
+:revdate: September 12, 2022
 :doctype: book
 :xrefstyle: full
 
 == Introduction
 The TOE may be vulnerable to presentation attacks where attackers attempt to subvert the biometric enrolment or verification by presenting the Presentation Attack Instruments (PAIs). There is a wide range of PAIs that can be used, including natural biometric characteristics, such as dead eyes, or artefacts created from copied or faked characteristics. Using natural biometric characteristics is out of scope of <<BIOPP-Module>> evaluation and the evaluator shall only use created artefacts to evaluate the TOE.
 
-The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 7 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail.
+The toolbox defines the common artefacts for each biometric modality based on publicly available information (e.g. research papers), experiences and knowledge shared among the BIO-iTC members. The evaluator needs to read the <<BIOSD>> Section 7 as it explains how the evaluator shall use the toolbox during the ATE_IND.1 (Independent testing) and AVA_VAN.1 (Penetration testing) evaluation for Presentation Attack Detection (PAD) in detail. In this evaluation, PAD is being measured using Imposter Attack Presentation Attack Rate (IAPAR), which is a full system review as opposed to a component level review which would evaluate the matching subsystem and PAD subsystem separately.
 
 This overview is originally developed for evaluation activities for FIA_MBV_EXT.3, however, the evaluator can apply the same principles to evaluation activities for FIA_MBE_EXT.3.
 
@@ -93,6 +93,35 @@ Each test item includes the following sub-sections. This toolbox overview provid
 
 |===
 
+== Finding and accessing the Toolboxes
+To provide flexibility in support for testing the various biometric modalities for PAD, the versioning of the Toolboxes are maintained independently from the versioning of the primary documents (<<BIOPP-Module>> and <<BIOSD>>). Each Toolbox is maintained separately within its own GitHub repository so updates targeted to specific modalities can be updated independently as needed over time.
+
+There are several ways to find the Toolboxes that are available. 
+
+The simplest method is to go to the GitHub Public Release Packages table from the https://biometricitc.github.io/#_current_published_documents[Biometrics Security iTC homepage]. Each available Toolbox will be listed along with a direct link in GitHub to the most recent toolbox package for that modality.
+
+The second method is to go to the https://github.com/biometricITC[Biometrics Security iTC organization] in GitHub and find the repositories for each modality there. Each modality has a repository titled <Modality>-Toolbox (where <Modality> would be replaced by a supported modality type). From the home page of the repository, on the right side there is a section titled "Releases". Here you will find all the released versions of the particular toolbox.
+
+=== Toolbox versioning
+To keep the versioning simple, each released update is just given a sequential whole number, so 1, 2, 3... (the original release was versioned 1.0, but subsequent updates are following the whole number sequencing). 
+
+=== Toolboxes and technical decisions
+Unlike the primary documents (such as the <<BIOPP-Module>> and <<BIOSD>>), toolboxes are always fully updated to the next revision; there are no Technical Decisions applied to a Toolbox, it is updated, approved and released as a new version (i.e. moved from v2 to v3).
+
+=== Choosing the correct version
+In general it is expected that an evaluation will utilize the most recent version of the Toolbox as of the time the evaluation was started (as defined by the scheme). As the Toolboxes can be updated at any time, the evaluation start date is used to help vendors freeze the requirements for their products.
+
+It is possible for a scheme to have different requirements about what version of a Toolbox should be used, which supercedes any recommendations made by the iTC. 
+
+=== Referencing toolboxes in an evaluation
+As all evaluations must properly reference the Protection Profiles and Supporting Documents, the Toolbox(es) used in an evaluation claiming support for PAD must list the specific versions of any Toolboxes. 
+
+The reference in the Conformance Claims section of the Security Target should provide the following information to unambigiously point to the correct Toolbox as part of the claims for the PP-Configuration (using the Face Toolbox as an example):
+
+Toolbox: Face Toolbox, Version 2, November 11, 2021 (https://github.com/biometricITC/Face-Toolbox/releases/tag/v2)
+
+All components, including the GitHub link to the specific version must be included in the Security Target.
+
 == Common guidance for Independent & Vulnerability Testing
 As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enroled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce an attack presentation match (i.e. a successful presentation attack).
 
@@ -120,6 +149,44 @@ Artefact production needs to follow these requirements:
 * The evaluator shall document any necessary information so that artefacts used for the test can be re-produced by the evaluator.
 
 * Each produced artefact shall be identified by a unique identifier. This identifier shall be attached to the artefact at all times (as far as this is possible without destroying the artefact).
+
+As the testing described in the individual toolboxes encompasses the creation and presentation of a large number of artefacts, the test report shall provide sufficient information to ensure how the artefacts were created, presented and as applicable, stored (or retrieved from storage).
+
+If the scheme provides a guidance on the level of detail of the report, the evaluator must follow such guidance. However, if there is no guidance available from the scheme, the BIO-iTC recommends the inclusion of visual (pictures and/or video) evidence in the test report. If sound is included as part of the biometric system, then audio evidence should also be included with the visual evidence.
+
+Broadly, visual/audio evidence should be used on a per-artefact type basis, such that each type is shown clearly once, and the remainder of artefact production and usage would be recorded as expected (but not captured with visual or audio recordings). The evidence collected does not need to be continuous (for example a full video recording of every step), but must record significant steps in the creation of the artefact. 
+
+If visual/audio evidence is being provided, the following categories should have visual/audio evidence:
+
+* Creation of an artefact type (significant steps)
+* Use of an artefact type (preparation that may be needed, usage)
+* If applicable, storage of an artefact type after use
+** How the artefact will be stored for later use
+* If applicable, retrieval of an artefact type from storage for use
+** How is the artefact prepared for use after removed from storage
+
+From a planning standpoint, the easiest way to handle this would be to record one artefact from retrieval/production to disposal/storage (depending on the type).
+
+===== Artefact storage
+It is widely known that, for any biometric modality, some degree of variation in the biometric features will occur over time. For example, the levels of skin dryness is different between summer and winter, and captured fingerprint images from the same person may also vary a little but such little difference may affect the biometric performance. So, fingerprint artefacts created in winter should not be used for presentation attacks against enrolment images captured in summer. The quality of artefacts may also be changed over time. For example, glue used for fingerprint artefacts begins to dry and harden and the success rate of attacks may begin to drop within a few weeks after the creation of the artefacts. 
+
+The evaluator may reuse artefacts for later evaluations, however, the evaluator shall check that the following conditions are met to reuse the stored artefacts:
+
+* Time difference between enrolment and artefact creation and usage should be as minimal as possible, though individual biometric modalities may have different time periods for which reuse is acceptable. If the evaluator uses artefacts older (or for longer) than one month (here defined as a five week period from enrolment and creation), the evalutor shall follow the guidance in <<Use of stored artefacts, Use of stored artefacts>> for proper storage and retrieval of the artefacts.
+* Artefacts should be properly stored according to the manufacturer's recommendations and remain free of visible defects. Some of these may be obvious, like the proper storage of photographs, but others may be more detailed, requiring temperature and humidity controls. For artefacts that are capable of being stored, information about what is done to store the artefacts (supported by visual evidence and documentation) along with guidance from the manufacturer that supports the methods implemented.
+
+===== Use of stored artefacts 
+For artefacts where long term storage of more than one month and re-use is more subjective (such as the fingerprint artefacts), information about how it was determined whether the artefact was in acceptable condition must be provided (for example levels of dryness and hardness).
+
+If artefacts stored more than one month are used in later evaluations, creation date of the artefacts, number of stored artefacts used and the method of storage must be included with the new evaluation to show proper procedures were followed for handling the artefacts (the method of creation of the stored artefacts does not need to be included).
+
+Before use, the evaluator shall check any stored artefacts for visible changes between the artefact and the subject to determine if the artefact is still acceptable for use. For example, a fingerprint artefact where the subject may have cut on their finger at the time of testing would lead to an artefact not being of sufficient quality. 
+
+However, as artefacts may degrade over time in ways that are not visible to the human eye but which may impact PAD performance, a PAD test must not rely solely on stored artefacts. To ensure that artefacts are not failing solely due to some sort of unseen degradation, if stored artefacts are to be used, a PAD test sequence must utilize a combination of both stored and freshly created artefacts. 
+
+The purpose of this mix is to provide a check that the stored artefacts by comparing the performance of the stored artefacts to the new ones. Stored artefacts that seem to perform significantly lower then they should must be discarded and fresh artefacts created to replace them. The test report must denote which artefacts were stored vs fresh. It is always recommended to create new artefacts for every test to avoid this check if the time and cost of creation of artefacts is low.
+
+As different modalities have different types of artefacts, the modality overview documents specify the requirements for artefact reuse in terms of the maximum percentage of stored artefacts of a type which can be used in testing.
 
 ==== Presentation of artefacts
 The results of the presentation of artefacts is defined as:
@@ -149,7 +216,7 @@ The presentation attack can be performed through the following two steps after p
 ==== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
-* The evaluator shall produce all artefacts defined in the toolbox.
+* The evaluator shall produce artefacts according to the Verification List defined in the toolbox based on the sensor type. If the sensor type does not match one explicitly listed, then all artefacts must be created (as defined by the Other type).
 
 * The evaluator shall follow instructions in the toolbox to produce artefacts, especially the evaluator shall use tools or materials (e.g. camera, display or printer) that meet requirements in toolbox.
 
@@ -217,23 +284,23 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator may refine the production process of artefacts, as explained in <<BIOSD>> Section 7. The toolbox describes generalized process to produce artefacts referring to research papers. These research papers may describe more detailed information to produce better artefacts. Such information is valuable if the TOE's PAD algorithm is the same or similar to ones tested by researchers. The evaluator shall consider relevant research papers to be authoritative over the generalized descriptions provided in a toolbox for improving the creation of artefacts.
 
-* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
+* The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
 ==== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
-* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week.
+* Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
 === Number of Subjects
 If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts/transactions. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 7.
 
 === Pass/Fail Criteria
-As described in <<BIOSD>>, both independent and penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
+As described in <<BIOSD>>, penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
 == Related Documents
 
-- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
-- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, November 9, 2021, Version 1.1
+- [#BIOPP-Module]#[BIOPP-Module]# collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, September 12, 2022, Version 1.1
+- [#BIOSD]#[BIOSD]# Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Biometric enrolment and verification - for unlocking the device -, September 12, 2022, Version 1.1
 
 == Revision History
 
@@ -261,7 +328,7 @@ As described in <<BIOSD>>, both independent and penetration testing shall be fin
 |Public Release
 
 |1.1
-|November 9, 2021
+|September 12, 2022
 |Update based on changes to the PP-Module v1.1
 
 |===
