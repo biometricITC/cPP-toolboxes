@@ -307,6 +307,8 @@ The evaluator moves to penetration testing only if the TOE passes independent te
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
+As some PAD toolboxes are targeted to levels above AVA_VAN.1, the respective toolbox overview will contain more information about guidance for testing at respective AVA_VAN level.
+
 === General test protocol
 Presentation attack can be performed through the following two steps after performing <<Preparation>>.
 
