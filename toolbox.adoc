@@ -5,7 +5,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 1.2
-:revdate: August 22, 2024
+:revdate: October 1, 2024
 :doctype: book
 :xrefstyle: full
 
@@ -303,16 +303,17 @@ As explained in <<BIOPP-Module>>, presentation attacks can be done by attempts o
 The maximum number of attempts/transactions allowed with one artefact is twenty (20). If three (3) matches are made to the artefact, the independent test fails (further attempts/transactions are not necessary even if 20 total attempts/transactions have not yet been made) because the IAPAR has exceeded 15%, the allowable maximum value specified in FIA_MBV_EXT.3.1.
 
 == Guidance for Penetration Testing (AVA_VAN)
+
 The evaluator moves to penetration testing only if the TOE passes independent testing. As described in <<BIOSD>> Section 7, the evaluator shall select those artefacts that show a higher IAPAR during independent testing or higher quality artefacts.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
 
-As some PAD toolboxes are targeted to levels above AVA_VAN.1, the respective toolbox overview will contain more information about guidance for testing at respective AVA_VAN level.
+=== Guidance for AVA_VAN.1
 
-=== General test protocol
+==== General test protocol
 Presentation attack can be performed through the following two steps after performing <<Preparation>>.
 
-==== Artefact production
+===== Artefact production
 The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator should select artefacts in a toolbox that may produce attack presentation match at higher probability considering the result of independent testing.
@@ -321,16 +322,20 @@ The production of artefacts for each toolbox shall be performed as follows:
 
 * The evaluator may produce an arbitrary number of artefacts from each test subject within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
-==== Presentation of artefacts
+===== Presentation of artefacts
 The evaluator shall present artefacts to the TOE to perform presentation attacks.
 
 * Each artefact shall be presented to the TOE an arbitrary number of times within allowed time period. As described in <<BIOSD>>, penetration testing shall be finished within one week.
 
-=== Number of Subjects
+==== Number of Subjects
 If the evaluator can create artefacts that produce an attack presentation match during independent testing, the evaluator should select the test subjects whose artefacts had successful matches and increase the number of attempts/transactions. The evaluator may replace the test subject for penetration testing as described in <<BIOSD>> Section 7.
 
-=== Pass/Fail Criteria
+==== Pass/Fail Criteria
 As described in <<BIOSD>>, penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
+
+=== Guidsance for AVA_VAN.2 and Higher
+
+As some PAD toolboxes are targeted to levels above AVA_VAN.1, there will be additional information regarding the guidance about penetration testing. The AVA_VAN.1 guidance is used as the basis for all penetration testing, with additional information specific to that toolbox being provided in the PAD toolbox overview.
 
 == Related Documents
 
@@ -367,7 +372,7 @@ As described in <<BIOSD>>, penetration testing shall be finished within one week
 |Update based on changes to the PP-Module v1.1
 
 |1.2
-|August 22, 2024
+|October 1, 2024
 |Update to support new PAD test levels
 
 |===
