@@ -1,0 +1,11 @@
+= Biometrics Security iTC (BIO-iTC) PAD Toolbox Overview
+
+== Introduction
+This is the repository for the PAD Toolbox Overview. For the main repository, please go to https://github.com/biometricITC/cPP-biometrics.
+
+== Access to PAD Test Scripts/Attacks
+The BIO-iTC has developed several PAD toolboxes for use in testing biometric systems resistance to spoofing attacks. Each modality has a single public repository for attacks that are considered Basic according to their Attack Potential calculations. Higher level attacks are considered sensitive due to the possible widespread usefulness in attacking biometric systems.
+
+Access to these attacks is only granted by specific request, which can be made by submitting a https://github.com/biometricITC/cPP-toolboxes/issues/new/choose[**PAD L2+ Request**].
+
+For more information about the requirements for approval to the repositories review https://github.com/biometricITC/Administration/blob/master/PAD_Level2_Repo.adoc[Biometrics Security iTC PAD Level 2 Repository Administration].
