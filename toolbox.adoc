@@ -154,7 +154,7 @@ Higher PAD Levels are inclusive of lower PAD Levels, so a set of tests at PAD Le
 
 As the <<BIOPP-Module>> relies on the AVA_VAN level specified in the Base-PP, it is possible that the AVA_VAN level for the PAD test may not match the Base-PP. In this case it is up to the evaluator and scheme to determine how to handle the different level claims. The BIO-iTC has determined that there is value in providing PAD tests at higher AVA_VAN levels regardless of the claims by the device that may incorporate the biometric system.
 
-However, the BIO-iTC will explore the possibility of developing a PAD evaluation method at any PAD levels that can be mutually recognized under the CCRA, for example, using multi-assurance evaluation concept that enables the evaluation to conform to multi-assurance security target.
+However, the BIO-iTC will explore the possibility of developing a PAD evaluation method at any PAD level that can be mutually recognized under the CCRA, for example, using a multi-assurance evaluation concept that enables the evaluation to conform to a multi-assurance security target.
 
 == Common guidance for Independent & Vulnerability Testing
 As explained in <<BIOPP-Module>>, the TOE is the whole biometric system, including Comparison, Decision and Presentation Attack Detection Subsystems. This means in order to successfully overcome the TOE by the use of artefacts, a genuine person (test subject) has to be enroled into the TOE, artefacts have to be created referring the toolbox for the corresponding biometric modality and artefacts have to produce an attack presentation match (i.e. a successful presentation attack).
