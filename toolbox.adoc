@@ -5,7 +5,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 1.2
-:revdate: October 1, 2024
+:revdate: October 15, 2024
 :doctype: book
 :xrefstyle: full
 
@@ -335,7 +335,7 @@ If the evaluator can create artefacts that produce an attack presentation match 
 ==== Pass/Fail Criteria
 As described in <<BIOSD>>, penetration testing shall be finished within one week. The evaluator may select one or two artefacts and perform an arbitrary number of attempts/transactions within this time period. If the evaluator can create artefacts that reproducibly cause the TOE to achieve an IAPAR higher than what is specified in FIA_MBV_EXT.3.1, the TOE fails AVA_VAN.1 evaluation.
 
-=== Guidsance for AVA_VAN.2 and Higher
+=== Guidance for AVA_VAN.2 and Higher
 
 As some PAD toolboxes are targeted to levels above AVA_VAN.1, there will be additional information regarding the guidance about penetration testing. The AVA_VAN.1 guidance is used as the basis for all penetration testing, with additional information specific to that toolbox being provided in the PAD toolbox overview.
 
@@ -376,7 +376,7 @@ ISO/IEC 19989 “Information security — Criteria and methodology for security 
 |Update based on changes to the PP-Module v1.1
 
 |1.2
-|October 1, 2024
+|October 15, 2024
 |Update to support new PAD test levels
 
 |===
