@@ -339,7 +339,7 @@ As described in <<BIOSD>>, penetration testing shall be finished within one week
 
 As some PAD toolboxes are targeted to levels above AVA_VAN.1, there will be additional information regarding the guidance about penetration testing. The AVA_VAN.1 guidance is used as the basis for all penetration testing, with additional information specific to that toolbox being provided in the PAD toolbox overview.
 
-ISO/IEC 19989 “Information security — Criteria and methodology for security evaluation of biometric systems” provides such additional information. However, this standard is not specific to the mobile devices and all evaluation activities may not be applied to the mobile biometrics.
+ISO/IEC 19989 “Information security — Criteria and methodology for security evaluation of biometric systems” provides such additional information. However, this standard is not specific to the mobile devices and not all evaluation activities may be applicable to mobile device biometric systems.
 
 == Related Documents
 
