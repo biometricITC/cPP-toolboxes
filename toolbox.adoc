@@ -240,7 +240,7 @@ The results of the presentation of artefacts is defined as:
 
 |===
 
-== Guidance for Independent Testing (ATE_IND.1)
+== Guidance for Independent Testing (ATE_IND)
 For independent testing, this guidance is common for all toolboxes. More specific guidance for a specific biometric modality is provided in each toolbox.
 
 This is in addition to guidance in <<Common guidance for Independent & Vulnerability Testing>>.
@@ -378,5 +378,9 @@ ISO/IEC 19989 “Information security — Criteria and methodology for security 
 |1.2
 |October 15, 2024
 |Update to support new PAD test levels
+
+|1.3
+|September 2, 2025
+|Remove specific reference to ATE_IND.1 to support EAL2 or higher evaluations
 
 |===
