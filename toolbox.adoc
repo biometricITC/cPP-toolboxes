@@ -378,8 +378,8 @@ While ISO/IEC 19989 (_"Information security — Criteria and methodology for sec
 
 | *"The Box" (Scope vs. Method)* 
 | Broad scope with rigid, prescriptive test methodologies. 
-| Defined scope limits with increased methodological freedom inside the box. 
-| Strictly defined scope boundaries with high methodological freedom inside the box.
+| Defined scope boundaries with limited methodological freedom inside the box. 
+| Defined scope boundaries with high methodological freedom inside the box.
 
 | *Subjects* 
 | *10* (Default baseline) 
