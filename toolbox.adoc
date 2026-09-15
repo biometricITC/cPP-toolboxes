@@ -337,9 +337,66 @@ As described in <<BIOSD>>, penetration testing shall be finished within one week
 
 === Guidance for AVA_VAN.2 and Higher
 
-As some PAD toolboxes are targeted to levels above AVA_VAN.1, there will be additional information regarding the guidance about penetration testing. The AVA_VAN.1 guidance is used as the basis for all penetration testing, with additional information specific to that toolbox being provided in the PAD toolbox overview.
+==== From Scripted Procedures to Exploratory Resistance Testing
+At PAD Level 1 (AVA_VAN.1), evaluation activities are strictly scripted. This standardized approach ensures that every laboratory executes identical procedures against the target, yielding consistent, repeatable, and directly comparable results across test facilities.
 
-ISO/IEC 19989 “Information security — Criteria and methodology for security evaluation of biometric systems” provides such additional information. However, this standard is not specific to the mobile devices and not all evaluation activities may be applicable to mobile device biometric systems.
+As evaluations advance to higher AVA_VAN levels, testing becomes intentionally more open-ended. Rather than following a rigid script, evaluators are afforded greater latitude and "wiggle room" to apply their expertise, explore subtle systemic weaknesses, and iteratively refine attack presentations.
+
+==== Defining "The Box": Scope Boundaries vs. Methodological Freedom
+To balance tester autonomy with standard compliance, evaluations at higher levels are governed by well-defined operational boundaries—often referred to as "the box." As the assurance level rises, the perimeter of the box is more strictly defined to guarantee that all testing strictly complies with the targeted attack potential rating and stays within the intended Common Criteria scope.
+
+Conversely, the specific testing methodology permitted _within_ that box becomes intentionally less prescriptive. Establishing firm outer limits prevents out-of-scope testing, while providing the evaluator the necessary agility to craft custom artefacts, fine-tune presentation techniques, and thoroughly exercise the biometric sensor within those boundaries.
+
+==== Cumulative Supersets and the Shift from Breadth to Depth
+Higher PAD levels remain cumulative supersets in terms of threat coverage. An evaluation at a higher level continues to test the vulnerability vectors and artefact categories introduced at lower levels; however, the depth and rigor of each test change significantly.
+
+Because penetration testing windows are constrained by fixed time budgets, evaluator effort must transition from broad sampling to deep analysis. To enable this shift, the required number of **subjects** (i.e., individual fingers or faces evaluated during testing) is systematically reduced:
+
+* *PAD Level 1:* 10 **subjects** (broad baseline sampling)
+* *PAD Level 2:* 7 **subjects** (intermediate depth and focused tuning)
+* *PAD Level 3+:* 4 **subjects** (maximum depth and bespoke attack optimization)
+
+By decreasing the **subject** pool, evaluators avoid expending valuable laboratory hours on repetitive presentations across a broad cohort. Instead, those hours are redirected toward high-expertise attack scenarios, bespoke artefact creation, and iterative presentation attempts.
+
+==== Application of Standards to Mobile Ecosystems
+While ISO/IEC 19989 (_"Information security — Criteria and methodology for security evaluation of biometric systems"_) provides general evaluation criteria for biometric security, it is not tailored to the unique operational profiles of mobile devices. Evaluators must therefore apply these exploratory, in-depth principles in direct alignment with the mobile-specific attack potential scales, superset matrices, and artefact specifications set forth in the individual PAD toolboxes.
+
+==== Level Comparison Framework
+
+[cols="3,3,3,3", options="header"]
+.Attack Potential Level Comparison
+|===
+| Evaluation Dimension 
+| PAD-L1 (AVA_VAN.1) 
+| PAD-L2 (AVA_VAN.2) 
+| PAD-L3+ (AVA_VAN.3+)
+
+| *Testing Paradigm* 
+| *Fully Scripted:* Identical execution steps across all laboratories. 
+| *Hybrid / Guided:* Core scripts supplemented with evaluator-driven exploration. 
+| *Exploratory:* High evaluator flexibility and expertise-driven probing.
+
+| *"The Box" (Scope vs. Method)* 
+| Broad scope with rigid, prescriptive test methodologies. 
+| Defined scope limits with increased methodological freedom inside the box. 
+| Strictly defined scope boundaries with high methodological freedom inside the box.
+
+| *Subjects* 
+| *10* (Default baseline) 
+| *7* 
+| *4*
+
+| *Coverage Strategy* 
+| *Breadth:* Broad verification across representative *subjects*. 
+| *Superset (Intermediate Depth):* Covers L1 vectors with deeper tuning. 
+| *Superset (Maximum Depth):* Covers L1 & L2 vectors with bespoke optimization.
+
+| *Evaluator Time Allocation* 
+| High-volume, repeatable presentations across a wider cohort. 
+| Balanced between presentation volume and artefact refinement. 
+| Concentrated on iterative artefact craft, presentation nuances, and edge cases.
+|===
+
 
 == Related Documents
 
